@@ -1,4 +1,5 @@
 import time
+import json
 
 from scapy.layers.inet import IP, ICMP
 from scapy.packet import Raw
@@ -9,11 +10,18 @@ import requests
 
 def login():
     url = 'http://192.168.50.3:8080/eportal/InterFace.do?method=login'
-    data = "#####your info#####"
+    with open("content", "r") as f:
+        data = f.read()
     header = {
         "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
     }
     response = requests.post(url, data, headers=header)
+    content = json.loads(response.text)
+    encoding = response.encoding
+    if content['result'] == 'fail':
+        print(content['message'].encode(encoding).decode('utf-8'))
+    else:
+        print("login at --> " + time.asctime(time.localtime(time.time())))
     return
 
 
@@ -31,11 +39,9 @@ def pong():
 
 
 if __name__ == '__main__':
-    login()
     while True:
         if pong():
             time.sleep(5)
         else:
             login()
-            print("login at --> " + time.asctime(time.localtime(time.time())))
             time.sleep(10)

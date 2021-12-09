@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+    <meta http-equiv="Content-Type" content="text/html" charset="GBK">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="expires" content="0">
+    <meta name="viewport" content="width=device-width,initial-scale=0.8,maximum-scale=0.8,user-scalable=0"/>
+    <title>您已成功下线</title>
+    <style type="text/css">
+        body {
+            background-color: #65535;
+            font-family: "Microsoft Yahei", "微软雅黑", Arial, STHeiti;
+            font-size: 22px;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #messageTip {
+            float: left;
+            position: relative;
+            font-size: 36px;
+            line-height: 36px;
+            color: #000000;
+            filter: alpha(opacity=87);
+            -moz-opacity: 0.87;
+            -khtml-opacity: 0.87;
+            opacity: 0.87;
+        }
+
+        #offlineDiv{
+			width:275px;
+			height:54px;
+			background-repeat:no-repeat;
+			background-image: url(http://192.168.50.3:8081/eportal/interface/index_files/pc/offline1.png);
+            background-position: 0 0;
+            border-color: none;
+		}
+
+    </style>
+    <script type="text/javascript"
+            src="http://192.168.50.3:8081/eportal/interface/index_files/pc/login_bch.js"></script>
+</head>
+<body youdao="bind">
+<table style="width: 100%; height: 100%" cellpadding="0" cellspacing="0">
+    <tbody>
+    <tr>
+        <td id="logoTd" style="height: 36px;">
+            <div id="logo" style="float: left; margin-left: 25px; margin-top: 24px;"><img
+                    src="nodeDir/msg/2485d15d17a44e0fbfe426c6e86be481/3/logo2.png"></div>
+        </td>
+    </tr>
+    <tr style="width: 100%; text-align: center;">
+        <td id="contenttable_tr3">
+            <table style="width: 100%; height: 280px" cellpadding="0" cellspacing="0">
+                <tbody>
+                <tr height="150px;" style="vertical-align: center; text-align: center;">
+                    <td style="width: 40%;"><img style="float: right; position: relative;"
+                                                 src="http://192.168.50.3:8081/eportal/interface/index_files/pc/style_logout.png">
+                    </td>
+                    <td style="width: 60%;"><span id="messageTip">您已下线,欢迎使用网络</span></td>
+                </tr>
+                <tr height="1px;" align="center">
+                    <td colspan="2">
+                        <div style="height: 1px; width: 60%; margin: 0px; padding: 0px; font-size: 0px; border: 0px; border-top: 1px solid #c2d0dc;"></div>
+                    </td>
+                </tr>
+                <tr align="center" valign="middle">
+                    <td colspan="2" align="center">
+                        <div id="offlineUrlTip" style="display: none;"></div>
+                        <div id="offlineUrlTip_1"><img
+                                src="http://192.168.50.3:8081/eportal/interface/index_files/pc/t.gif"></div>
+                    </td>
+                </tr>
+                <tr height="10px;">
+                    <td colspan="2"></td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2"><a href="gologout.jsp">
+                        <div id="offlineDiv"></div>
+                    </a></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+<script type="text/javascript">
+function myfunction(){
+	var url=window.location.href;
+	 /* if(url.indexOf("ms2g")>-1){
+		url=url.substring(url.indexOf("ms2g")+5,url.length);
+		if(url!=""){
+			setTimeout(function(){
+				document.getElementById("offlineUrlTip_1").style.display='none';
+				document.getElementById("offlineUrlTip").style.display='block';
+				if (document.getElementById("offlineUrl")) {
+					document.getElementById("offlineUrl").src = url;
+				}
+			},3000);
+
+		}else{
+			document.getElementById("offlineUrlTip_1").style.display='none';
+		}
+	}else{ */
+		document.getElementById("offlineUrlTip_1").style.display='none';
+	/*  }  */
+}
+
+window.onresize=function(){
+	autosize();
+}
+
+window.onload = function () {
+	myfunction();
+	autosize();
+}
+
+function autosize(){
+	 var $height =getDocHeight();
+  	 $("#contenttable_tr3").css("height",$height-139);
+ }
+
+function getDocHeight() {
+  var D = document;
+  return Math.max(
+      Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),
+      Math.max(D.body.offsetHeight, D.documentElement.offsetHeight),
+      Math.max(D.body.clientHeight, D.documentElement.clientHeight)
+  );
+}
+
+
+</script>
+</html>
