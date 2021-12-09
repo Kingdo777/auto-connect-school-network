@@ -1,0 +1,2292 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"> <html> <head> <meta http-equiv="Content-Type" content="text/html; charset=GBK"> <title>登录成功</title> <meta name="renderer" content="webkit"> <meta name="renderer" content="ie-comp"> <meta name="renderer" content="ie-stand"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta http-equiv="Content-Type" content="text/html" charset="GBK"> <meta http-equiv="pragma" content="no-cache"> <meta http-equiv="Cache-Control" content="no-cache, must-revalidate"> <meta http-equiv="expires" content="0"> <style>
+	*{
+		margin:0px;
+		padding:0px;
+		border-spacing: 0px;
+	}
+	body {
+		background-color: #f7f9fa;
+		font-size: 22px;
+		width: 100%;
+		height: 100%;
+		margin: 0px;
+		padding: 0px;
+		overflow: hidden;
+		font-family: 微软雅黑;
+	}
+
+	ul {
+		list-style: none;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	#header {
+		height: 8%;
+		width: 100%;
+		z-index: 2;
+	}
+
+	#loginFrameLogo_hk {
+		height: 36px;
+		margin-top: 20px;
+		margin-left: 30px;
+	}
+
+	#closeSubPage {
+		display: block;
+	}
+
+	.accountBalance {
+		width: 181px;
+		height: 180px;
+		text-align: center;
+		position: relative;
+		background-repeat: no-repeat;
+		background-image: url("http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png");
+		background-position: 0px -128.5px;
+		font-size: 40px;
+		color: #ffffff;
+		cursor: pointer;
+		display:table;
+  		_position:relative;
+  		overflow:hidden;
+	}
+
+	.warp{
+		  width: 181px;
+		  height: 180px;
+		  vertical-align:middle;
+		  display:table-cell;
+		  _position:absolute;
+		  _top:50%;
+	}
+
+	.accountBalanceOver {
+		width: 181px;
+		height: 180px;
+		text-align: center;
+		position: relative;
+		background-repeat: no-repeat;
+		background-image: url("http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png");
+		background-position: -181px -128.5px;
+		font-size: 40px;
+		color: #ffffff;
+		cursor: pointer;
+		display:table;
+  		_position:relative;
+  		overflow:hidden;
+	}
+
+	.setMeal {
+		width: 180px;
+		height: 180px;
+		text-align: center;
+		background-repeat: no-repeat;
+		position: relative;
+		background-image: url("http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png");
+		background-position: 0px -308px;
+		font-size: 40px;
+		color: #ffffff;
+		cursor: pointer;
+	}
+
+	.setMealOver {
+		width: 180px;
+		height: 180px;
+		text-align: center;
+		background-repeat: no-repeat;
+		position: relative;
+		background-image: url("http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png");
+		background-position: -181px -308px;
+		font-size: 40px;
+		color: #ffffff;
+		cursor: pointer;
+	}
+
+	.availableTime_tip {
+		width: 181px;
+		height: 181px;
+		text-align: center;
+		background-repeat: no-repeat;
+		position: relative;
+		background-image: url("http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png");
+		background-position: 0px -488px;
+		font-size: 40px;
+		color: #ffffff;
+		cursor: pointer;
+	}
+
+	.availableTime_tipOver {
+		width: 181px;
+		height: 181px;
+		text-align: center;
+		background-repeat: no-repeat;
+		position: relative;
+		background-image: url("http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png");
+		background-position: -181px -488px;
+		font-size: 40px;
+		color: #ffffff;
+		cursor: pointer;
+	}
+
+	#loginFrameLogofood_hk {
+		-moz-user-select: none;
+		margin-left: 3px;
+		text-align: left;
+		overflow: hidden;
+	}
+
+	.btmeac1 {
+		color: #788185;
+		font-size: 14px;
+		vertical-align: top;
+		cursor: pointer;
+	}
+
+	.btmeac5 {
+		color: #788185;
+		font-size: 14px;
+		vertical-align: top;
+
+		cursor: pointer;
+	}
+
+	.btmeac6 {
+		color: #42AEEA;
+		font-size: 14px;
+		vertical-align: top;
+
+		cursor: pointer;
+	}
+
+	#navigation li ul li {
+		background-color: #BDBDBD;
+		height: 37px;
+		margin: 0;
+		overflow: hidden;
+		float: left;
+	}
+
+	#navigation li ul li a:link,#navigation li ul li a:visited {
+		display: block;
+		text-decoration: none;
+		width: 96px;
+		height: 36px;
+		line-height: 36px;
+		border: 1px solid #D2D2D2;
+		border-width: 1px 1px 0 1px;
+		background: #fff;
+		padding-left: 0px;
+		float: right;
+		text-align: center;
+	}
+
+	#navigation li ul li a:hover {
+		color: #fff;
+		background: #5a95d1;
+	}
+
+	#navigation li ul {
+		display: none;
+		position: absolute;
+		top: 20;
+		left: 0;
+		margin-top: 0px;
+		width: 100px;
+	}
+
+	#navigation li ul li ul {
+		display: none;
+		position: absolute;
+		top: 0px;
+		left: 130px;
+		margin-top: 0;
+		margin-left: 1px;
+		width: 100px;
+		border: 1px;
+		color: #dddddd;
+	}
+
+	#navigation li a {
+		color: #788185;
+		font-size: 14px;
+		vertical-align: center;
+
+	}
+
+	#navigation li ul li ul a {
+		color: #788185;
+		font-size: 14px;
+		vertical-align: center;
+
+	}
+
+	.toLogOut_1 {
+		float: right;
+		width: 139px;
+		height: 23px;
+		background-repeat: no-repeat;
+		background-image: url("http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png");
+		text-align: top;
+		background-position: -168px -55px;
+		text-align: center;
+		line-height: 23px;
+		display: inline-block;
+		margin-right: 95px;
+	}
+
+	.toLogOut_2 {
+		float: right;
+		width: 139px;
+		height: 23px;
+		background-repeat: no-repeat;
+		background-image: url("http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png");
+		text-align: top;
+		background-position: -168px -78px;
+		text-align: center;
+		line-height: 23px;
+		display: inline-block;
+		margin-right: 95px;
+	}
+
+	#toLogOut {
+		color: #FFF;
+		font-size: 14px;
+
+		margin-top: 2px;
+		cursor: pointer;
+	}
+
+	#success_leftArrowsId {
+		position: relative;
+		width: 23px;
+		height: 40px;
+		background-repeat: no-repeat;
+		background-image: url("http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png");
+		background-position: 0px 0px;
+		cursor: pointer;
+		float: right;
+		display: none;
+	}
+
+	#success_rightArrowsId {
+		position: relative;
+		width: 23px;
+		height: 40px;
+		background-repeat: no-repeat;
+		background-image: url("http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png");
+		background-position: -23px 0px;
+		cursor: pointer;
+		float: left;
+		display: none;
+	}
+
+	.title {
+		top: 0px;
+		width: 180px;
+		text-align: center;
+		color: #4285ca;
+		font-size: 24px;
+		display: inline;
+		position: relative;
+
+	}
+
+	#tipframe {
+		background-color: silver;
+		align: center;
+		valign: middle;
+		filter: Alpha(opacity =     40);
+		opacity: 0.4;
+		width: 100%;
+		position: absolute;
+		top: 0px;
+		display: none;
+		height: 100%;
+		z-index: 1001;
+	}
+
+	#tipDiv {
+		display: none;
+		z-index: 1006;
+		position: absolute;
+		height: 40%;
+		left: 30%;
+		right: 30%;
+		width: 40%;
+		top: 30%;
+		background-color: #f5f8f9;
+		width: 40%;
+	}
+
+	#title_close {
+		position: absolute;
+		height: 38px;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+	}
+
+	#tip_title {
+		position: absolute;
+		text-align: center;
+		width: 100%;
+		height: 38px;
+		font-size: 18px;
+		font-weight: bolder;
+		color: #ff831f;
+		top: 8px;
+		left: 0px;
+	}
+
+	#tip_close_div {
+		position: absolute;
+		top: 0px;
+		cursor: pointer;
+		right: 0px;
+		point: hand;
+		background-image: url(http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png);
+		background-position: 0px -83px;
+		height: 46px;
+		width: 46px;
+	}
+
+	#tip_close_div:HOVER {
+		position: absolute;
+		top: 0px;
+		cursor: pointer;
+		right: 0px;
+		point: hand;
+		background-image: url(http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png);
+		background-position: -45px -83px;
+		height: 46px;
+		width: 46px;
+	}
+
+	#tip_content {
+		position: absolute;
+		word-wrap: break-word;
+		word-break: break-all;
+		max-width: 700px;
+		top: 40%;
+		left: 35px;
+		right: 35px;
+		color: #333333;
+		font-size: 18px;
+
+	}
+
+	#notify {
+		height: 279px;
+		width: 143px;
+		font-size: 12px;
+
+		background-image: url(http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png);
+		background-position: -373px -267px;
+		background-repeat: no-repeat;
+		padding: 18px;
+		z-index: 100;
+		display: none;
+		line-height: 26px;
+		float: left;
+		margin-right: 75px;
+	}
+
+	#erweima {
+		height: 279px;
+		width: 143px;
+		padding-top:14px;
+		padding-right:28px;
+		padding-left:3px;
+		padding-bottom:18px;
+		z-index: 100;
+		float: left;
+		margin-left: 75px;
+	}
+
+	#notify p {
+		margin-bottom: 18px;
+	}
+
+	#notifyTitle {
+		font-size: 14px;
+
+		line-height: 20px;
+		font-weight: bolder;
+		float: left;
+		padding-top: 5px;
+	}
+
+	#notifycontent {
+		padding-top: 5px;
+		font-size: 12px;
+		height: 230px;
+		width:150px;
+		text-align:left;
+		overflow: auto;
+		word-break: break-all;
+		word-wrap: break-word;
+		color: #666666;
+		float: left;
+
+	}
+
+	.warnStyle {
+		margin-left: 133px;
+		cursor: pointer;
+		position: absolute;
+		float: left;
+		Z-INDEX: 1001;
+		display: none;
+	}
+
+	.ballvalue {
+		/* padding-top: 55px; */
+		line-height: 40px;
+		font-size: 28px;
+		_position:relative;
+  		_top:-50%;
+	}
+
+	.vline {
+		color: #788185;
+		margin-right: 20px;
+		vertical-align: top;
+		display: inline;
+	}
+
+	.settingHeader {
+		color: black;
+		font-size: 24px;
+		font-weight: bolder;
+		height: 50px;
+	}
+
+	.settingTittle {
+		color: black;
+		width: 250px;
+
+		font-size: 18px;
+		color: #333333;
+	}
+
+	.settingTip {
+		width: 250px;
+		color: #666666;
+
+		font-size: 14px;
+		padding-top:3px;
+	}
+
+	#autoLand {
+		position: absolute;
+		width: 40px;
+		height: 25px;
+		cursor: pointer;
+		background-repeat: no-repeat;
+		background-image: url(http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png);
+		background-position: -740px -25px;
+		display: inline;
+		margin-left: -120px;
+	}
+
+	#autoMac{
+		position: absolute;
+		width: 40px;
+		height: 25px;
+		cursor: pointer;
+		background-repeat: no-repeat;
+		background-image: url(http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png);
+		background-position: -740px -25px;
+		display: inline;
+		margin-left: 3px;
+	}
+
+	#autoMacInSetting{
+		position: absolute;
+		width: 40px;
+		height: 25px;
+		cursor: pointer;
+		background-repeat: no-repeat;
+		background-image: url(http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png);
+		background-position: -740px -25px;
+		display: inline;
+		margin-left: -120px;
+	}
+
+
+
+	#userAccess {
+		text-decoration: underline;
+		font-size: 18px;
+
+		color: #4285ca;
+	}
+
+	.noticelogo {
+		position: absolute;
+		background-repeat: no-repeat;
+		background-image: url(http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png);
+		background-position: -126px -81px;
+		width: 21px;
+		height: 15px;
+		margin-top: 7px;
+	}
+
+	.xiala {
+		position: relative;
+		float: right;
+		right: 30px;
+		top: 15px;
+		width: 7px;
+		height: 7px;
+		background-repeat: no-repeat;
+		background-image: url(http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png);
+		background-position: -138px -99px;
+	}
+
+	.jiandaoshou {
+		border: 0;
+		/* padding-top: 12px;
+				padding-right: 10px; */
+		position: absolute;
+		background-repeat: no-repeat;
+		background-image: url(http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png);
+		background-position: -93px -82px;
+		width: 33px;
+		height: 33px;
+		margin-top: -15px;
+	}
+
+	.closeSubPage2 {
+		position: absolute;
+		background-repeat: no-repeat;
+		background-image: url(http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png);
+		background-position: -45px -83px;
+		width: 46px;
+		height: 46px;
+		cursor: pointer;
+		margin-left: -48px;
+		margin-top: 4px;
+	}
+
+	.pcClient {
+		position: absolute;
+		background-repeat: no-repeat;
+		background-image: url(http://192.168.50.3:8081/eportal/interface/index_files/pc/down.png);
+		background-position: 0 0;
+		width: 268px;
+		height: 318px;
+		cursor: pointer;
+		margin-left: 58px;
+	}
+
+	.phoneClient {
+		position: absolute;
+		background-repeat: no-repeat;
+		background-image: url(http://192.168.50.3:8081/eportal/interface/index_files/pc/down.png);
+		background-position: -268px 0px;
+		width: 417px;
+		height: 318px;
+		cursor: pointer;
+		margin-left: 325px;
+	}
+
+	.settingImg {
+		position: absolute;
+		background-repeat: no-repeat;
+		background-image: url(http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png);
+		background-position: -80px -36px;
+		width: 87px;
+		height: 36px;
+		cursor: pointer;
+		margin-top: -18px;
+	}
+
+
+	.autoMacImg {
+		position:absolute;
+		background-repeat: no-repeat;
+		background-image: url(http://192.168.50.3:8081/eportal/interface/index_files/pc/unc.png);
+		background-position: -80px -36px;
+		width: 87px;
+		height: 36px;
+		cursor: pointer;
+		margin-top: -18px;
+		margin-left: 150px;
+		display: inline;
+	}
+
+
+	.index_subpage_title_bgimg {
+		color:white;
+		width: 150px;
+		height: 150px;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		display: none;
+	}
+
+	.maintable_tr2 {
+		background-color: white;
+		border-top: 1px solid #c2d0dc;;
+	}
+
+	.headLine {
+		border-bottom: 1px solid #c2d0dc;;
+	}
+
+	#index_subpage_title_bg {
+		z-index: 99999;
+	}
+	#feeChargeModuleTitleImage{
+		background-image: url(http://192.168.50.3:8081/eportal/interface/index_files/pc/ball1.png);
+	}
+	#changePackageModuleTitleImage{
+		background-image: url(http://192.168.50.3:8081/eportal/interface/index_files/pc/ball2.png);
+	}
+	#shiYongXiangQingTitleImage{
+		background-image: url(http://192.168.50.3:8081/eportal/interface/index_files/pc/ball3.png);
+	}
+	#daoQiTiXingTitleImage{
+		background-image: url(http://192.168.50.3:8081/eportal/interface/index_files/pc/ball3.png);
+	}
+
+	.index_subpage_title_bgimg div{
+		padding-top:20px;
+	}
+
+	.ballInfo{
+		text-align: center;
+		width: 180px;
+		display: none;
+		cursor: pointer;
+	}
+
+	.secondLine{
+		font-size:28px;
+		line-height: 28px;
+	}
+
+	.firstLine{
+		font-size: 28px;
+	}
+
+	.checked{
+		height:50px;
+		font-size: 18px;
+		color:#3ead68;
+		border-bottom: 3px solid #3ead68;
+		display: inline;
+		cursor: pointer;
+	}
+
+	.unchecked{
+		font-size: 18px;
+		color:#666666;
+		display: inline;
+		cursor: pointer;
+	}
+
+	.checkedImg{
+		cursor: pointer;
+		background-repeat: no-repeat;
+		background-image: url(http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png);
+		background-position: -660px -49px;
+		display: inline;
+		margin-top: -11px;
+		font-size: 19px;
+	}
+
+	.zhujiming{
+		font-size: 18px;
+		color: #333333;
+		line-height: 0px;
+		float: left;
+		margin-top: 20px;
+	}
+	.regTime{
+		margin-top:10px;
+		font-size: 12px;
+		color: #666666;
+		display: inline;
+		line-height: 0px;
+		float: left;
+	}
+	.devicetd{
+		height:60px;
+		width: 80%;
+		float: left;
+	}
+	.tips{
+		font-size: 12px;
+		color: #666666;
+		padding-top: 30px;
+		float: left;
+	}
+
+	/*w-error-popup-white*/
+	.w-error-popup-white{ width: 100%; height: 100%; z-index: 1201;text-align: center; position: fixed; left: 0; top:0;}
+	.w-error-popup-white .w-error-back{ width: 100%; height: 100%; background-color: rgba(0,0,0,.8); position:fixed;  z-index: 1000; left: 0; top:0;}
+	.w-error-popup-white .w-error-inner{ background-color: #fff; width: 50%; top: 15%; left: 50%; margin-left: -25%; text-align: center; border-radius: 20px; padding:  0; z-index: 1001; position: relative;}
+	.w-error-popup-white .w-error-inner h4{ font-size: 20px; color: #333; padding: 16px 0; margin: 0 32px; border-bottom: 1px solid #e5e9ec; font-weight: normal; }
+	.w-error-popup-white .w-error-inner .w-error-content{ color: #333; font-size: 16px; line-height: 45px; padding: 32px; height: 270px; overflow-y:auto; overflow-x:hidden; text-align: center;  }
+
+	/*u-btn */
+	.u-btn{ padding: 8px 20px; background-color: #7da646; border-bottom: 5px solid #7da646; border-radius: 10px; color: #fff; display: inline-block; vertical-align: middle;text-decoration:none;margin:15px;}
+
+
+	</style> <script type="text/javascript" src="http://192.168.50.3:8081/eportal/interface/index_files/pc/login_bch.js"></script>
+	<script type="text/javascript" src="http://192.168.50.3:8081/eportal/interface/index_files/js/AuthInterFace.js"></script> </head> <body oncontextmenu="return true" style="background: #f7f9fa; overflow: auto; -moz-user-select: none;" onselectstart="return false" scroll="no"> <table id="maintable" width="100%" align="center"> <tr> <td width="10%" class="headLine"></td> <td width="80%" class="headLine"> <table width="100%"> <tr id="conttable_tr1"> <td colspan="3"> <table width="100%"> <tr> <td width="60%"> <div id="leftId" style=" font-size: 14px; color: #4a555b; dsiplay: inline;"> <div id="selfserviceTd" style="float: left; display: none;"> <a href="#" id="selfservice" class="btmeac1" target="_blank" style="font-weight: bold;color: red" onmouseover="this.className=&#39;btmeac6&#39;" onmouseout="this.className=&#39;btmeac5&#39;">自助服务</a> </div> <div id="rghallTd" style="float: left; display: none"> <div class="vline"></div> <a href="#" id="rghall" class="btmeac1" style="font-weight: bold;" target="_blank" onmouseover="this.className=&#39;btmeac6&#39;" onmouseout="this.className=&#39;btmeac5&#39;">网上缴费</a> </div> <div id="portalTd" style="float: left; display: none"> <div class="vline"></div> <a href="#" id="portal" class="btmeac1" style="font-weight: bold;" target="_blank" onmouseover="this.className=&#39;btmeac6&#39;" onmouseout="this.className=&#39;btmeac5&#39;">门户网站</a> </div> <div id="resourceTd" style="float: left; display: none"> <div class="vline"></div> <a id="resource" class="btmeac1" style="font-weight: bold;" onclick="openframe(this)" onmouseover="this.className=&#39;btmeac6&#39;" onmouseout="this.className=&#39;btmeac5&#39;">校内资源</a> </div> <div id="downAppTd" style="float: left; display: none;"> <div class="vline"></div> <a href="#" id="downApp" class="btmeac1" style="font-weight: bold;" target="_blank" onmouseover="this.className=&#39;btmeac6&#39;" onmouseout="this.className=&#39;btmeac5&#39;">客户端下载</a> </div> <div id="xueBaTd" style="float: left; display: none"> <div class="vline"></div> <a href="#" id="xueBa" class="btmeac1" style="font-weight: bold;" onclick="openframe(this)" onmouseover="this.className=&#39;btmeac6&#39;" onmouseout="this.className=&#39;btmeac5&#39;">学霸模式</a> </div> <div id="settingTd" style="float: left; display: none"> <div class="vline"></div> <a href="#" id="setting" class="btmeac1" style="font-weight: bold;" onclick="opensetting()" onmouseover="this.className=&#39;btmeac6&#39;" onmouseout="this.className=&#39;btmeac5&#39;">上网设置</a> </div> <div id="autoMacTr" style=" display: none;"> <div class="vline"></div> <a href="#" class="btmeac1" style="font-weight: bold;">本机无感认证</a> <div id="autoMac" onclick="toggleAutoMac();"></div> </div> <div id="faqTd" style="display: none;; display: none"> <div class="vline"></div> <a href="#" id="faq" class="btmeac1" target="_blank" onmouseover="this.className=&#39;btmeac6&#39;" onmouseout="this.className=&#39;btmeac5&#39;">&nbsp;FAQ</a> </div> </div> </td> <td id="serviceSwitchTr" style="dsiplay: none;"> <div style="z-index: 100; position: relative; right: 0px; width: 110px; float: right;"> <div style="vertical-align: center;"> <ul id="navigation"> <li onmouseover="displaySubMenu(this)" onmouseout="hideSubMenu(this)"><a href="#">选择服务</a>&nbsp; <div class="xiala"></div> <ul id="serviceSwitch"> </ul> </li> </ul> </div> </div> </td> </tr> <tr> <td> <div id="skip" align="left" class="btmeac5" style="float: left;padding-bottom: 5px;padding-top: 5px;"> </div> </td> </tr> </table> </td> </tr> </table> </td> <td width="10%" class="headLine" style="padding-bottom: 5px;padding-top: 5px;"> <div href="" width="150px" id="toLogOut" class="toLogOut_1" onclick="logout()" onmouseover="this.className=&#39;toLogOut_2&#39;" onmouseout="this.className=&#39;toLogOut_1&#39;" style="" tip="您确认要离开网络吗?">下线 Logout</div> </td> </tr> <tr id="maintable_tr1"> <td width="10%" valign="top"> <table width="100%" height="100%"> <tr> <td height="53px"> </td> </tr> <tr> <td> <div id="notifyTd1"> <div id="erweima"> <img src="http://192.168.50.3:8081/eportal/interface/index_files/pc/126.png"> </div> </div> </td> </tr> </table> </td> <td width="80%" id="maintable_tr1_td"> <table id="contenttable" align="center" width="100%"> <tr id="conttable_tr2"> <td colspan="3"> <div id="logo" style="float: left; padding-top: 12px;"> <img src="nodeDir/msg/2485d15d17a44e0fbfe426c6e86be481/3/logo2.png"> </div> </td> </tr> <tr id="contenttable_tr3"> <td width="20%"></td> <td width="60%" valign="top"> <table id="userinfotable" width="766px" align="center"> <tr> <td height="45px"> <div id="contentDive" sytle="display:none" haspopuppages="false"> <span id="userName" style="color: #212121; font-size: 40px; "></span> <span id="welcomeTip" style="color: #212121; font-size: 40px; text-align: center;; "> </span> <span id="userMessage" style="color: #757575; font-size: 25px; text-align: center; margin-left: 25px; letter-spacing: 2px">您已成功连接校园网!</span> <div style="height: 1px; width: 100%; margin: 0px; padding: 0px; font-size: 0px; border: 0px; border-top: 1px solid #c2d0dc;"></div> </div> </td> </tr> <tr> <td height="38px"> <div id="hk_margin_left_1" style="width: 59%;"> <div align="left" id="userAccessDiv" style="padding-top:10px;padding-bottom:41px"> <span style="color: #212121; font-size: 18px; padding-top: 19px; text-align: center; ">继续访问：</span> <a id="userAccess" target="_blank" href=""></a> </div> </div> </td> </tr> <tr id="maxLeaving_Tr" style="width: 100%; margin: 0; padding: 0; display: none"> <td width="100%" colspan="2" style="margin: 0;" height="245px"> <div align="center" style="float: left; width: 760px; color: #757575; font-size: 30px; "> <table> <tr> <td height="241px;"> <div class="jiandaoshou"></div> </td> <td> <div style="font-size: 34px; margin-top: 150px; display: inline; color: #777777; margin-left: 50px;">欢迎使用校园网</div> </td> </tr> </table> </div> </td> </tr> <tr id="balltableTr"> <td height="222px"> <table id="balltable" align="center" width="100%"> <tr> <td width="33.3%" height="181px" align="left"> <div class="ballInfo" id="ball1" onclick="openframe(this)" onmouseenter="onmouseOver(1);" onmouseleave="onmouseOut(1);"> <div class="warnStyle" id="warnStyle1"> <img src="http://192.168.50.3:8081/eportal/interface/index_files/pc/warn.png"/> </div> <div class="accountBalance" id="ballball1"> <div class="warp"> <div id="ballvalue1" class="ballvalue"></div> </div> </div> <br> <div class="title" id="ballTittle1"></div> </div> </td> <td width="33.3%" height="181px" align="center"> <div class="ballInfo" id="ball2" onclick="openframe(this)" onmouseenter="onmouseOver(2);" onmouseleave="onmouseOut(2);"> <div class="warnStyle" id="warnStyle2"> <img src="http://192.168.50.3:8081/eportal/interface/index_files/pc/warn.png"/> </div> <div class="setMeal" id="ballball2"> <div class="warp"> <div id="ballvalue2" class="ballvalue"></div> </div> </div> <br> <div class="title" id="ballTittle2"></div> </div> </td> <td width="33.3%" height="180px" align="right"> <div class="ballInfo" id="ball3" onclick="openframe(this)" onmouseenter="onmouseOver(3);" onmouseleave="onmouseOut(3);"> <div class="warnStyle" id="warnStyle3"> <img src="http://192.168.50.3:8081/eportal/interface/index_files/pc/warn.png"/> </div> <div class="availableTime_tip" id="ballball3"> <div class="warp"> <div id="ballvalue3" class="ballvalue"></div> </div> </div> <br> <div class="title" id="ballTittle3"></div> </div> </td> </tr> </table> <div align="center" class="warning"><span style="color: #333333; font-size: 12px; display: none; cursor: pointer; margin-top: 10px;" id="tipMessageId"></span> <div style="font-size: 12px; cursor: pointer; margin-top: 10px; display: none;" id="errorflowTip"> <div style="margin-left: 10px;display: inline;"> <img src="http://192.168.50.3:8081/eportal/interface/index_files/pc/i.png" width="11px" height="11px"/> </div> <div style="display:inline; text-decoration:underline; color: red; font-weight: normal; margrin-left: 2px;">您的流量可能异常，请点击查看</div> </div> </div> </td> </tr> </table> </td> <td valign="top" width="20%"> </td> </tr> </table> </td> <td width="10%" valign="top"> <table width="100%" height="100%"> <tr> <td height="53px"> </td> </tr> <tr> <td> <div id="notifyTd"> <div id="notify"> <div id="notifyTitle">我的消息</div> <div id="notifycontent"></div> </div> </div> </td> </tr> </table> </td> </tr> <tr id="maintable_tr2"> <td width="10%" class="maintable_tr2"></td> <td width="80%" class="maintable_tr2"> <div id="isGglHideId"> <table width="100%" height="130px;"> <tr> <td width="20%" id="gonggaoleft"> <div style="float: left;"> <div id="success_leftArrowsId"></div> </div> </td> <td width="60%"> <div id="loginFrameLogofood_hk" style="float: left top; position: relative; width: 766px; height: 100%"> <div id="loginFrameLogofood_hk_1" class="center_div" style="margin-top: 8px;"> <span style="font-size: 20px; margin-right:10px; color: rgba(0, 0, 0, 0.87)" id="tzggTitleInfo">通知公告</span> <span class="noticelogo"></span> </div> <div id="loginFrameLogofood_hk_2" style="line-height: 25px; margin-top: 5px; font-size: 12px; color: rgba(0, 0, 0, 0.541176);"></div> </div> </td> <td width="20%"> <div style="float: right;"> <div id="success_rightArrowsId"></div> </div> </td> </tr> </table> </div> </td> <td width="10%" class="maintable_tr2"></td> </tr> <tr style="background-color: #FFFFFF; margin: 0; padding: 0; max-height: 22px; height: 22px;width: 100%;"> <td align="center" style="background-color: #FFFFFF;" valign="center" colspan="3"> <span style="color: rgba(0, 0, 0, 0.54); font-size: 12px; text-align: center; font-family: 微软雅黑;"> 华中科技大学网络与计算中心&copy;2020 </span></td> </tr> </table> <div id="divMask" style="DISPLAY: none; Z-INDEX: 1001; FILTER: alpha(opacity =50); LEFT: 0px; WIDTH: 100%; POSITION: absolute; TOP: 0px; BACKGROUND-COLOR: silver; TEXT-ALIGN: center; opacity: 0.5; moz-opacity: 0.5;"></div> <div id="divTupian" style="Z-INDEX: 1003; display: none; POSITION: absolute;; top: 10px; left: 220px;"> <table style="width: 200px;"> <tbody> <tr style="width: 100%"> </tr> </tbody> </table> </div> <div id="divTupian3" style="z-index: 1003; display: none; position: absolute; top: 50px; left: 225px; margin-left: 100px;"> <table style="width: 900px;"> <tbody> <tr> <td> <div style="float: right;"> <a id="closeSubPage" class="closeSubPage" onclick="closeSubPage();" href="#" style="text-decoration: none; border: none;"> <span class="closeSubPage2"></span> </a> </div> </td> </tr> </tbody> </table> </div> <div id="index_subpage_title_bg" style="display: none; z-index: 99999; position: absolute; top: 0px; left: 185px; width: 154px; height: 153px; margin-left: 0px;" align="center"> <div style="background-image: 'http://192.168.50.3:8081/eportal/interface/index_files/pc/ball1.png'" class="index_subpage_title_bgimg" id="feeChargeModuleTitleImage"> <div id="feeChargeModuleTitleDiv"> </div> </div> <div style="background-image: 'http://192.168.50.3:8081/eportal/interface/index_files/pc/ball2.png'" class="index_subpage_title_bgimg" id="changePackageModuleTitleImage"> <div id="changePackageModuleTitleDiv"> </div> </div> <div style="background-image: 'http://192.168.50.3:8081/eportal/interface/index_files/pc/ball3.png'" class="index_subpage_title_bgimg" id="shiYongXiangQingTitleImage"> <div id="shiYongXiangQingTitleDiv"> </div> </div> <div style="background-image: 'http://192.168.50.3:8081/eportal/interface/index_files/pc/ball3.png'" class="index_subpage_title_bgimg" id="daoQiTiXingTitleImage"> <div id="daoQiTiXingTitleDiv"> </div> </div> </div> <div id="divPop" style="display: none; z-index: 1002; position: absolute; top: 54px; left: 300px; width: 820px; height: 600px; margin-left: 100px;" align="center"> <table style="width: 823px; height: 500px; vertical-align: top; z-index: 1101; background-color: #F7F9FA;"> <tbody> <tr align="center" valign="top" style="margin-top: 85px;"> <td colspan="2"> <iframe id="subPageUrl_chongzhi" scrolling="no" frameborder="0" height="530px" width="740px" style="margin-top: 30px;"> </iframe> <div id="settingDiv" scrolling="no" frameborder="0" height="500px" width="740px" style="margin-top: 30px;"> <table style="width: 90%;"> <tr> <td class="settingHeader">上网设置</td> </tr> <tr> <td style="border-bottom: 1px solid grey ;padding-bottom: 10px;"> <table width="100%"> <tr> <td style="float: left;" width="20%" id="autoMacSettingTd"> <span style="padding-bottom: 10px;" id="autoMacSetting" class="checked" onclick="autoMacSettingshow()">无感认证设置</span> </td> <td style="float: left;"> <span style="padding-bottom: 10px;" class="unchecked" id="autoLandSetting" onclick="autoLandSettingshow()">自动连接设置</span> </td> </tr> </table> </td> </tr> <tr> <td> <div style="height: 300px;width: 100%;overflow:auto;"> <div id="mabInfoThisDevice" style="display: none"> <table width="100%"> <tr id='mabInfoThisDeviceTr'> <td class='devicetd'> <div class='zhujiming'>本机</div><br> <div class='regTime' id='macinfoThisDevice'></div> </td> <td> <a id='autoMacInSetting' onclick='toggleAutoMacAutoMacInSetting();'> </a> </td></tr> </table> </div> <div width="100%" id="mabDevices"> </div> <div id="autoLandTable" style="display: none"> <table width="100%"> <tr> <td> <div class="zhujiming">自动连接</div><br> <div class="regTime">打开浏览器时自动连接校园网</div></td> <td> <a id='autoLand' onclick='toggleAutoland();'> </a> </td> </tr> </table> </div> <div class="tips" id="autoMacTips"> <div style="float: left;display: block;"> 小贴士 </div><br> <div style="float: left;display: block;">1.无感认证是指设备自动连接校园网</div><br> <div style="float: left;display: block;">2.一个账号只能绑定<span id="mabInfoMaxCount"></span>台终端，您已绑定<span id="autoMacNumTip"></span>台</div> </div> </div> </td> </tr> <tr> <td colspan="2"><span style="color: red; font-family: 微软雅黑; font-size: 16px;" id="settingErrInfoId"></span></td> </tr> </table> </div> <div id="appDownDiv" scrolling="no" frameborder="0" height="500px" width="740px" style="margin-top: 30px;"> <table align="left"> <tr height="100px"> <td class="settingHeader">软件下载</td> </tr> <tr> <td><a href="#" target="_blank" id="pcClient"> <span class="pcClient"></span> </a> <span id="phoneClient" class="phoneClient"> </span></td> </tr> </table> </div></td> </tr> </tbody> </table> </div> <div id="divTupian_package" style="Z-INDEX: 1003; display: none; POSITION: absolute; left: 220px; top: 10px;"> <table style="width: 200px;"> <tbody> <tr style="width: 100%"> </tr> </tbody> </table> </div> <div id="divTupian3_package" style="z-index: 1003; display: none; position: absolute; top: 50px; left: 225px; margin-left: 100px;"> <table style="width: 900px;"> <tbody> <tr style="width: 100%"> </tr> <tr> <td> <div style="float: right;"> <a id="closeSubPage" onclick="closeSubPage();" href="#" style="text-decoration: none; border: none;"> <span class="closeSubPage2"></span> </a> </div> </td> </tr> </tbody> </table> </div> <div id="divPop_package" style="display: none; z-index: 1002; position: absolute; top: 54px; left: 300px; width: 820px; height: 600px; margin-left: 100px;" align="center"> <table style="width: 823px; height: 640px; vertical-align: middle; z-index: 1101; background-color: #F7F9FA"> <tbody> <tr align="center" valign="middle" style="margin-top: 85px;"> <td><iframe id="subPageUrl_ChangePackage" scrolling="no" frameborder="0" height="600px" width="740px " style="margin-top: 30px;"></iframe></td> </tr> </tbody> </table> </div> <div id="tipframe"></div> <div id="tipDiv" align="left"> <div id="title_close"> <a href="#" id="tip_close_a" onclick="closeTipMessage()"> <div id="tip_close_div"></div> </a> </div> <div id="tip_content"></div> </div> <div id="mabcolse-confirm" style="display: none;" class="w-error-popup-white"> <div class="w-error-back"></div> <div class="w-error-inner"> <div id="w-confirm-content" class="w-error-content" style="height: auto; font-size: 26px;"> 您确认要离开网络吗?</div> <div class="btn" style="padding: 1rem;display:inline-block; "> <a class="u-btn" href="javascript:cancleLogout();" style="float: left;">取消</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a id="sure" class="u-btn" href="javascript:sureLogout();" style="float: left;">确定</a> </div> </div> </div> <div id="alert-continue-pop" style="display: none;" class="w-error-popup-white"> <div class="w-error-back"></div> <div class="w-error-inner"> <div id="w-confirm-content" class="w-error-content" style="height: auto; font-size: 26px;"></div> <div> <img src='http://192.168.50.3:8081/eportal/interface/index_files/phone/loading.gif'/> <SPAN style='FONT-SIZE: 20pt'><STRONG>操作正在进行中,请稍候...</STRONG></SPAN> </div> </div> </div> <script type="text/javascript">
+
+		var wheight=0;
+	    function getDocHeight() {
+	    	if(wheight!=0){
+	    		return wheight;
+	    	}else{
+			      var D = document;
+			      wheight = Math.max(
+			          Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),
+			          Math.max(D.body.offsetHeight, D.documentElement.offsetHeight),
+			          Math.max(D.body.clientHeight, D.documentElement.clientHeight)
+			      );
+			      return wheight;
+	    	}
+
+	  }
+
+	    /* function getDocHeight() {
+	      var D = document;
+	      return Math.max(
+	          Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),
+	          Math.max(D.body.offsetHeight, D.documentElement.offsetHeight),
+	          Math.max(D.body.clientHeight, D.documentElement.clientHeight)
+	      );
+	  	} */
+
+
+
+	    var onlineTime = 0;
+	    var timerRunning = true;
+	    var intervalTime = new Date().getTime();
+	    function closeSubPage() {
+	    	$("#errorflowTip").hide();
+	    	hideAllTitleImg();
+	        window.parent.document.getElementById("tipframe").style.display = 'none';
+	        window.parent.document.getElementById("divPop").style.display = 'none';
+	        window.parent.document.getElementById("divTupian").style.display = 'none';
+	        window.parent.document.getElementById("divTupian3").style.display = 'none';
+	        window.parent.document.getElementById("divMask").style.display = 'none';
+	        window.parent.document.getElementById("divPop_package").style.display = 'none';
+	        window.parent.document.getElementById("divTupian_package").style.display = 'none';
+	        window.parent.document.getElementById("divTupian3_package").style.display = 'none';
+	        var url = "interface/GKD/blank_hk.html";
+	        if (document.getElementById("subPageUrl_chongzhi")) {
+	            document.getElementById("subPageUrl_chongzhi").src = url;
+	        }
+	        var userIndex = getQueryStringByName("userIndex");
+			AuthInterFace.freshOnlineUserInfo(userIndex,function(freshOnline){
+					 getTime=1;
+		       		 fillData();
+			});
+	    }
+
+	    function openframe(obj) {
+	        var url = obj.getAttribute("url");
+	        if (url == null || url == "" || url.indexOf("noSelfServiceurl")!=-1) {
+	            return false;
+	        }
+	        hideAllTitleImg();
+	   		if (obj.getAttribute("id") == "ball1"){
+	   			if($("#warnStyle1").css("display")=='none'){
+		   			$("#feeChargeModuleTitleImage").show();
+		   			var valueOnMoveIn=ballInfoData[0]["valueOnMoveIn"];
+	          		var typeOnMoveIn=ballInfoData[0]["typeOnMoveIn"];
+		   			var value=ballInfoData[0]["value"];
+		   			if(valueOnMoveIn && (value!=valueOnMoveIn)){
+			   			$("#feeChargeModuleTitleDiv").html(formatValueMoveOn(valueOnMoveIn,typeOnMoveIn));
+			   			$("#feeChargeModuleTitleImage").show();
+			   			$("#index_subpage_title_bg").show();
+		   			}else{
+		   				$("#feeChargeModuleTitleImage").hide();
+		   				$("#index_subpage_title_bg").hide();
+		   			}
+	   			}
+	   		}else if(obj.getAttribute("id") == "ball2"){
+	   			if($("#warnStyle2").css("display")=='none'){
+		   			$("#changePackageModuleTitleImage").show();
+		   			 valueOnMoveIn=ballInfoData[1]["valueOnMoveIn"];
+		      		 typeOnMoveIn=ballInfoData[1]["typeOnMoveIn"];
+		      		 value=ballInfoData[1]["value"];
+				   	if(valueOnMoveIn && (value!=valueOnMoveIn)){
+			   			$("#changePackageModuleTitleDiv").html(formatValueMoveOn(valueOnMoveIn,typeOnMoveIn));
+			   			$("#changePackageModuleTitleImage").show();
+			   			$("#index_subpage_title_bg").show();
+		   			}else{
+		   				$("#changePackageModuleTitleImage").hide();
+		   				$("#index_subpage_title_bg").hide();
+		   			}
+	   			}
+	   		}else if(obj.getAttribute("id") == "ball3"){
+	   			if($("#warnStyle3").css("display")=='none'){
+		   			$("#shiYongXiangQingTitleImage").show();
+		   			 valueOnMoveIn=ballInfoData[2]["valueOnMoveIn"];
+		      		 typeOnMoveIn=ballInfoData[2]["typeOnMoveIn"];
+		      		 value=ballInfoData[2]["value"];
+					if(valueOnMoveIn && (value!=valueOnMoveIn)){
+			   			$("#shiYongXiangQingTitleDiv").html(formatValueMoveOn(valueOnMoveIn,typeOnMoveIn));
+			   			$("#shiYongXiangQingTitleImage").show();
+			   			$("#index_subpage_title_bg").show();
+		   			}else{
+		   				$("#shiYongXiangQingTitleImage").hide();
+		   				$("#index_subpage_title_bg").hide();
+		   			}
+	   			}
+
+	   		}else if(obj.getAttribute("id") == "warnStyle3"){
+	   			$("#daoQiTiXingTitleImage").show();
+	   			valueOnMoveIn=ballInfoData[2]["valueOnMoveIn"];
+	      		typeOnMoveIn=ballInfoData[2]["typeOnMoveIn"];
+	 			if(valueOnMoveIn){
+		   			$("#daoQiTiXingTitleDiv").html(formatValueMoveOn(valueOnMoveIn,typeOnMoveIn));
+		   			$("#daoQiTiXingTitleImage").show();
+		   			$("#index_subpage_title_bg").show();
+	   			}else{
+	   				$("#daoQiTiXingTitleImage").hide();
+		   			$("#index_subpage_title_bg").hide();
+	   			}
+	   		}
+
+	        $("#tipframe").show();//ie高版本不支持div遮罩--临时使用此实现效果
+	        window.parent.document.getElementById("divMask").style.height = window.parent.document.body.scrollHeight;
+	        //显示遮罩
+	        window.parent.document.getElementById("divMask").style.display = 'block';
+	        window.parent.document.getElementById("divPop").style.display = 'block';
+	        window.parent.document.getElementById("divTupian").style.display = 'block';
+	        window.parent.document.getElementById("divTupian3").style.display = 'block';
+	        window.top.scrollTo(0, 0);
+	        $("#settingDiv").hide();
+	        $("#appDownDiv").hide();
+	        $("#subPageUrl_chongzhi").show();
+	        var url = url;
+	        if (document.getElementById("subPageUrl_chongzhi")) {
+	            document.getElementById("subPageUrl_chongzhi").src = url;
+	        }
+	    }
+
+
+	    function openframeUrl(url){
+	    	 if (url != null && url != "") {
+	    		 $("#tipframe").show();//ie高版本不支持div遮罩--临时使用此实现效果
+	  	     	 window.parent.document.getElementById("divMask").style.height = window.parent.document.body.scrollHeight;
+		  	     //显示遮罩
+		  	     window.parent.document.getElementById("divMask").style.display = 'block';
+		  	     window.parent.document.getElementById("divPop").style.display = 'block';
+		  	     window.parent.document.getElementById("divTupian").style.display = 'block';
+		  	     window.parent.document.getElementById("divTupian3").style.display = 'block';
+		  	     window.top.scrollTo(0, 0);
+		  	     $("#settingDiv").hide();
+		  	     $("#appDownDiv").hide();
+		  	     $("#subPageUrl_chongzhi").show();
+		  	     if (document.getElementById("subPageUrl_chongzhi")) {
+		  	         document.getElementById("subPageUrl_chongzhi").src = url;
+		  	     }
+	     	}
+	    }
+
+	    function opensetting() {
+	        $("#tipframe").show();//ie高版本不支持div遮罩--临时使用此实现效果
+	        window.parent.document.getElementById("divMask").style.height = window.parent.document.body.scrollHeight;
+	        //显示遮罩
+	        window.parent.document.getElementById("divMask").style.display = 'block';
+	        window.parent.document.getElementById("divPop").style.display = 'block';
+	        window.parent.document.getElementById("divTupian").style.display = 'block';
+	        window.parent.document.getElementById("divTupian3").style.display = 'block';
+	        window.top.scrollTo(0, 0);
+	        $("#settingErrInfoId").html('');
+	        $("#settingDiv").show();
+	        $("#appDownDiv").hide();
+	        $("#subPageUrl_chongzhi").hide();
+	    }
+
+	    function openAppdown(){
+	       $("#tipframe").show();//ie高版本不支持div遮罩--临时使用此实现效果
+	       window.parent.document.getElementById("divMask").style.height = window.parent.document.body.scrollHeight;
+	       //显示遮罩
+	       window.parent.document.getElementById("divMask").style.display = 'block';
+	       window.parent.document.getElementById("divPop").style.display = 'block';
+	       window.parent.document.getElementById("divTupian").style.display = 'block';
+	       window.parent.document.getElementById("divTupian3").style.display = 'block';
+	       window.top.scrollTo(0, 0);
+	       $("#settingDiv").hide();
+	       $("#appDownDiv").show();
+	       $("#subPageUrl_chongzhi").hide();
+	    }
+
+	    function logout() {
+	        /* var userIndex = getQueryStringByName("userIndex");
+	        if (confirm(document.getElementById("toLogOut").getAttribute('tip'))) {
+	        	//is_close_win_allowed_do="false";
+	             AuthInterFace.logout(userIndex,function(logoutResult){
+	            	 if (logoutResult.result == "success") {
+	            		isshowClose="false";
+	                 	location.replace("logout.jsp?ms2g="+offlineurl);
+		             }else{
+		             	location.replace("logout.jsp?ms2g="+offlineurl);
+		             }
+	            });
+	        } */
+	        document.getElementById("w-confirm-content").innerHTML="您确认要离开网络吗?";
+	        document.getElementById("sure").href="javascript:sureLogout();"
+	    	$("#mabcolse-confirm").show();
+	    }
+
+	    function escapeHtml(string){
+	        var entityMap = {
+	            "&": "&amp;",
+	            "<": "&lt;",
+	            ">": "&gt;",
+	            '"': '&quot;',
+	            "'": '&#39;',
+	            "/": '&#x2F;'
+	        };
+	        return String(string).replace(/[&<>"'\/]/g,function (s) {
+	            return entityMap[s];
+	        });
+	    }
+
+	    function byteFormat(limit) {
+	      if(limit=="-1"){
+	      	return "无限制";
+	      }
+
+	      if (limit == null || limit == "" || limit==0) {
+	          return "<div class='firstLine'>0</div><div class='secondLine'>M</div>";;
+	      }
+	      var index = 0;
+	      var limit = limit.toUpperCase();//转换为小写
+	      if (limit.indexOf('B') == -1) { //如果无单位,加单位递归转换
+	          limit = limit + "B";
+	      }
+	      var reCat = /[0-9]*[A-Z]B/;
+	      if (!reCat.test(limit) && limit.indexOf('B') != -1) { //如果单位是b,转换为kb加单位递归
+	          limit = limit.substring(0, limit.indexOf('B')); //去除单位,转换为数字格式
+	          limit = (limit / 1024) + 'KB'; //换算舍入加单位
+	      }
+	      var array = new Array('KB','MB', 'GB', 'TB', 'PT');
+	      for (var i = 0; i < array.length; i++) { //记录所在的位置
+	          if (limit.indexOf(array[i]) != -1) {
+	              index = i;
+	              break;
+	          }
+	      }
+	      var limit = parseFloat(limit.substring(0, (limit.length - 2))); //得到纯数字
+	      while (limit >= 1024) {//数字部分1到1024之间
+	          limit /= 1024;
+	          index += 1;
+	      }
+	      var showbyte = limit.toFixed(1)+"";
+	      showbyte =  moneyFormat(showbyte);
+	      limit ="<div class='firstLine'>" +showbyte  + "</div><div class='secondLine'>"+ array[index]+"</div>";
+	      return limit;
+	  }
+
+	  function secFormat(value){
+	      var theTime = parseInt(value);// 秒
+	      var theTime1 = 0;// 分
+	      var theTime2 = 0;// 小时
+	      if(theTime > 60) {
+	          theTime1 = parseInt(theTime/60);
+	          theTime = parseInt(theTime%60);
+	          if(theTime1 > 60) {
+	              theTime2 = parseInt(theTime1/60);
+	              theTime1 = parseInt(theTime1%60);
+	          }
+	      }
+	      var result = "<div class='firstLine'>"+parseInt(theTime)+"</div><div class='secondLine'>秒</div>";
+	      if(theTime1 > 0) {
+	          result = "<div class='firstLine'>"+parseInt(theTime1)+"</div><div class='secondLine'>分</div>";
+	      }
+	      if(theTime2 > 0) {
+	      		var minute=fomatFloat(parseInt(theTime1)/60,1);
+	  			var dis=theTime2+'';
+	  			if(dis.indexOf(".")>-1){
+	  				dis=dis.substring(0,dis.indexOf("."));
+	  			}
+	  			if(minute>0){
+	  				dis=parseInt(dis)+minute;
+	  			}
+	          result = "<div class='firstLine'>"+dis+"</div><div class='secondLine'>小时</div>";
+	      }
+	      if(theTime==-1){
+	      	result = "<div class='firstLine'>无限制</div>";
+	      }
+	      return result;
+	  }
+
+	  	function fomatFloat(src,pos){
+			return Math.round(src*Math.pow(10, pos))/Math.pow(10, pos);
+		}
+
+	  Date.prototype.Format = function(fmt){ //author: meizz
+	    var o = {
+	      "M+" : this.getMonth()+1,                 //月份
+	      "d+" : this.getDate(),                    //日
+	      "h+" : this.getHours(),                   //小时
+	      "m+" : this.getMinutes()                 //分
+	     // "s+" : this.getSeconds(),                 //秒
+	     // "q+" : Math.floor((this.getMonth()+3)/3), //季度
+	     // "S"  : this.getMilliseconds()             //毫秒
+	    }
+	    if(/(y+)/.test(fmt))
+	      fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));
+	    for(var k in o)
+	      if(new RegExp("("+ k +")").test(fmt))
+	    fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));
+	    return fmt;
+	  }
+
+	  function dateFormat(value){
+	  	var date = new Date();
+	  	date.setTime(value*1000);
+	    return "<div style='font-size:38px;display:inline'>"+(date.getMonth()+1)
+	    		+"</div><div style='font-size:36px;display:inline'>月</div><div style='font-size:38px;display:inline'>"+(date.getDate())+"</div><div style='font-size:36px;display:inline'>日</div><br> <div style='font-size:20px;display:inline'>"+(date.getFullYear())+"年</div>";
+	  }
+
+	  String.prototype.endWith=function(s){
+	    if(s==null||s==""||this.length==0||s.length>this.length)
+	       return false;
+	    if(this.substring(this.length-s.length)==s)
+	       return true;
+	    else
+	       return false;
+	    return true;
+	   }
+	   String.prototype.startWith=function(s){
+	    if(s==null||s==""||this.length==0||s.length>this.length)
+	     return false;
+	    if(this.substr(0,s.length)==s)
+	       return true;
+	    else
+	       return false;
+	    return true;
+	   }
+
+	  function moneyFormat(value){
+	  	var result = value;
+	  	 if(value>10000){
+	  		 result="9999+";
+	  		 return result;
+	  	 }
+	  	 if(value.endWith(".00")){
+	  		 result = value.substring(0,value.length-3);
+	  	 }else if(value.endWith(".0")){
+	  		 result = value.substring(0,value.length-2);
+	  	 }
+	  	 return result;
+	  }
+
+	  function formatValueMoveOn(value, type) {
+	    var retval = "";
+	    switch (type) {
+	        case "string":
+	        	if(value.length>=4){
+	        		spit = value.length/2;
+	        		subvalue = value.substring(0,spit);
+	        		subvalue1 = value.substring(spit);
+	        		value=subvalue + "<br>"+subvalue1;
+		            retval = "<div style='margin-top:-10px;'><font size='6px'>" +value  + "</font></div>";
+	        	}else{
+	        		retval = "<div style='padding-top:15px;'><font size='6px'>" +value  + "</font></div>";
+	        	}
+
+	            break;
+	        default:
+	            retval = formatValue(value, type);
+	    }
+	    return retval;
+	}
+
+	  function formatValue(value, type) {
+	      var retval = "";
+	      switch (type) {
+	          case "byte":
+	          	  retval = byteFormat(value);
+	              break;
+	          case "sec":
+	              retval = secFormat(value);
+	              break;
+	          case "periodtime":
+	              retval = dateFormat(value);
+	              break;
+	          case "wirebyte":
+	             // retval = byteFormat(value);
+	              retval = "<img src=\"http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png\" style=\" position: absolute;margin-top:-39px;margin-left:-370px; clip:rect(57px,332px,78px,307px);\"/>"+byteFormat(value);
+	          	  break;
+	          case "wirelessbyte":
+	              //retval = byteFormat(value);
+	              retval = "<img src=\"http://192.168.50.3:8081/eportal/interface/index_files/pc/portal.png\" style=\" position: absolute;margin-top:-39px;margin-left:-392px; clip:rect(57px,357px,78px,332px);\"/>"+byteFormat(value);
+	              break;
+	          case "url":
+	              retval = value;
+	              break;
+	          case "string":
+	          		if(value.length>=6){
+	          			if(value.length%2==0){
+			        		spit = value.length/2;
+	          			}else{
+	          				spit = value.length/2+1;
+	          			}
+		        		subvalue = value.substring(0,spit);
+		        		subvalue1 = value.substring(spit);
+		        		value=subvalue + "<br>"+subvalue1;
+			            retval = "<div style='font-size:36px'>" +value  + "</div>";
+		        	}else{
+		        		retval = "<div style='font-size:36px'>" +value  + "</div>";
+		        	}
+	              break;
+	          case "deviceNum":
+	            retval = "<div class='firstLine'>" +value  + "</div><div class='secondLine'>台</div>";
+	            break;
+	          case "money":
+	              retval = "<div class='firstLine'>" +moneyFormat(value)  + "</div><div class='secondLine'> 元</div>";
+	              break;
+	          case "leftday":
+	          	 	//retval = "<font size='10px'>" value  + "</font><br><font size=5px>天</font>";
+	          		retval = "<div class='firstLine'>" +value+ "</div><div class='secondLine'> 天</div>";
+	          	break;
+	          default:
+	              retval = value;
+	      }
+	      return retval;
+	  }
+	    var getTime=1;
+	    var offlineurl="";
+	    var hasMabInfo;
+	    var isAlowMab;
+	    var isCloseWinAllowed;
+		var checkUserLogout;
+		var cookieService;
+		var realServiceName;
+		var domianName;
+		var errorflowurl;
+		var ballInfoData;
+	    function fillData(){
+	      getTime++;
+	      var userIndex = getQueryStringByName("userIndex");
+	      AuthInterFace.init("./");
+	      AuthInterFace.getOnlineUserInfo(userIndex,function(onlineUserInfo){
+		       if (onlineUserInfo.result == "fail") {
+		      	 window.location=onlineUserInfo.redirectUrl;
+		       }else if (onlineUserInfo.result == "wait"||onlineUserInfo.userGroup=='获取失败'){
+			       	if(getTime<5){
+			       		setTimeout(fillData,1000*getTime);
+			       	}
+		       }
+		     setCookies("EPORTAL_USER_GROUP",onlineUserInfo.userGroup);
+		       /* --------------------------------------------------------------------------------------------------------------------- */
+      	   /* 设置单点登录跳转url */
+	    	   if(""!=onlineUserInfo.successUrl){
+	    	  	 var successUrl = onlineUserInfo.successUrl;
+	    	  	 successUrl = eval("("+successUrl+")");
+	    	  	 var htmls = "";
+	    	  	 for(var o in successUrl){
+	    	  		 var successUrlType = successUrl[o].successUrlType;
+	    	  		 var successUrlSkipName = successUrl[o].successUrlSkipName;
+	    	  		 var successUrlName = successUrl[o].successUrlName;
+	    	  		 if("true"==successUrlType){
+	    	  			 window.location.href=successUrlName;
+	    	  			 return;
+	    	  		 }
+	    	  		 htmls = htmls+"<a name='successUrlSkip' href='"+successUrlName+"'target='_Blank' onmouseover='this.className=&#39;btmeac6&#39;' onmouseout='this.className=&#39;btmeac5&#39;'' >"+successUrlSkipName+"</a>&nbsp;&nbsp;&nbsp;";
+	    	  	 }
+		    	  document.getElementById("skip").innerHTML=htmls;
+		  	      $("#skip").show();
+		  	     } else{
+		  	    	 $("#skip").hide();
+		  	     }
+
+      	   /* --------------------------------------------------------------------------------------------------------------------- */
+		       if(onlineUserInfo.offlineurl != null && onlineUserInfo.offlineurl != ""){
+		         offlineurl=onlineUserInfo.offlineurl;
+		       }
+		       //填充三颗球信息
+		       if (onlineUserInfo.ballInfo != null && onlineUserInfo.ballInfo != "") {
+		           var ballInfo = eval(onlineUserInfo.ballInfo);
+		           if (ballInfo.length != 0) {
+		          	 	ballInfoData=ballInfo;
+		          	 	getBallInfo(ballInfo);
+		           }else{
+		 		      	$("#maxLeaving_Tr").show();
+		 		      	$("#balltableTr").hide();
+		           }
+		      }
+
+	      //设置上线消息
+	      if (onlineUserInfo.notify != null && onlineUserInfo.notify != "" &&onlineUserInfo.notify != "[]") {
+	          var notify = eval(onlineUserInfo.notify);
+	          var notifyMsg = "";
+	          for (var i = 0; i < notify.length; i++) {
+	              notifyMsg += "<p>" + notify[i] + "</p>"
+	          }
+	          $("#notifycontent").html(notifyMsg.httpHtml());
+	          $("#notify").show();
+	      } else {
+	          $("#notify").hide();
+	      }
+
+	      var netFlowKey=onlineUserInfo.netFlowKey;
+	      errorflowurl=onlineUserInfo.errorflowurl;
+	      if(netFlowKey&&netFlowKey!=""&&errorflowurl&&errorflowurl!=""){
+	      	$("#errorflowTip").show();
+	      	$("#errorflowTip").click(function(){
+	      		openframeUrl(errorflowurl+netFlowKey);
+	      	});
+	      }
+
+	    //是否开启实时 异常信息提醒
+	     if(onlineUserInfo.isErrorMsg&&onlineUserInfo.isErrorMsg=="true"){
+	    	 setTimeout(function(){
+	      	 	refreshErrorMsg();
+	   	 	},1000*60*5);
+	     }
+	      //设置用户访问
+	      var userUrl = onlineUserInfo.userUrl;
+	      if (userUrl && userUrl != "") {
+	          $("#userAccess").attr("href", userUrl);
+	          var userUrlText = userUrl;
+	          if (userUrlText.length > 23) {
+	              userUrlText = userUrlText.substr(0, 23) + "...";
+	          }
+	          $("#userAccess").html(userUrlText);
+	      }else{
+	      	$("#userAccessDiv").hide();
+	      }
+	      //设置自助服务
+	      var selfUrl = onlineUserInfo.selfUrl;
+	      if (selfUrl && selfUrl != null && selfUrl != "") {
+	          $("#selfservice").attr("href", selfUrl);
+	          var isFaq=onlineUserInfo.isFaq;
+	          if(isFaq&&isFaq=='true'){
+	          	 var  selfService=selfUrl.substring(0,selfUrl.indexOf("selfservice")+11);
+	             $("#faq").attr("href",selfService+"/module/repairself/web/repairreportfaqselfnologin_list.jsf");
+	             $("#faq").show();
+	          }
+	          $("#selfserviceTd").show();
+	      }else{
+	      	 $("#selfserviceTd").hide();
+	      }
+	      var resource = onlineUserInfo.resource;
+	      //设置用户资源，学霸模式等
+	      $("#xueBaTd").hide();
+	      $("#resourceTd").hide();
+	      if (resource && resource != null && resource != "") {
+	          var res = eval(resource);
+	          for (var i = 0; i < res.length; i++) {
+	              if (res[i]["id"] == "xuebaid") {
+	                  var url = res[i]["url"];
+	                  if (url != null && url != "") {
+	                      $("#resource").attr("url", url);
+	                  }
+	                  $("#resource").html(escapeHtml(res[i].displayName));
+	                  $("#resourceTd").show();
+	              }
+	              if (res[i]["id"] == "xiaoneiid") {
+	                  var url = res[i]["url"];
+	                  if (url != null && url != "") {
+	                      $("#xueBa").attr("url", url);
+	                  }
+	                  $("#xueBa").html(escapeHtml(res[i].displayName));
+	                  $("#xueBaTd").show();
+	              }
+	          }
+	      }
+
+	      //网上缴费
+	      var rghallUrl = onlineUserInfo.rghallUrl;
+	      if (rghallUrl != null && rghallUrl != "" && rghallUrl != 'null') {
+	          $("#rghall").attr("href", rghallUrl);
+	          $("#rghallTd").show();
+	      } else {
+	          $("#rghallTd").hide();
+	      }
+		 //门户网站
+	       var portalUrl = onlineUserInfo.portalUrl;
+	      if (portalUrl != null && portalUrl != "" && portalUrl != 'null') {
+	          $("#portal").attr("href", portalUrl);
+	          $("#portalTd").show();
+	      } else {
+	          $("#portalTd").hide();
+	      }
+	      //用户名
+	      domianName=onlineUserInfo.domianName;
+	      var userName = onlineUserInfo.userName;
+	      if (!userName || userName == "") {
+	      	$("#userName").hide();
+	      }else{
+	            if(domianName=='true'&&userName.indexOf("@")>-1){
+	      			userName=userName.substring(0,userName.lastIndexOf("@"));
+	      	    }
+		    $("#userName").html(userName + ",");
+	      }
+
+	      if(userName=="尊敬的来宾"){
+	      	$("#selfserviceTd").hide();
+	      	$("#settingTd").hide();
+	      	$("#downAppTd").hide();
+	      	$("#maxLeaving_Tr").show();
+	      	$("#balltableTr").hide();
+
+	      }
+
+	      //问候语
+	      var welcomeTip = onlineUserInfo.welcomeTip;
+	      if (welcomeTip && welcomeTip != null) {
+	          $("#welcomeTip").html(welcomeTip);
+	      }
+	       //自动登录
+	       userId=onlineUserInfo.userId;
+	       /* password=onlineUserInfo.password;;
+	       var cookieauto = getCookie("EPORTAL_AUTO_LAND");
+	       var cookiesave = getCookie("EPORTAL_COOKIE_SAVEPASSWORD");
+	        if (cookieauto == 'true') {
+	        	$("#autoLand").css("background-position", "-740px 0px");
+	        	$("#jizhumm").css("background-position", "-80px 0px");
+	        }else{
+	        	if(cookiesave=='true'){
+	        		 $("#jizhumm").css("background-position", "-80px 0px");
+	        	}else{
+	        		$("#jizhumm").css("background-position", "-80px -36px");
+	        	}
+	        	$("#autoLand").css("background-position", "-740px -25px");
+	        } */
+
+	        //服务切换
+	        var serviceList = onlineUserInfo.serviceList;
+		    cookieService=onlineUserInfo.service;
+		    realServiceName = onlineUserInfo.realServiceName;
+		    hasMabInfo=onlineUserInfo.hasMabInfo;
+		  	checkUserLogout=onlineUserInfo.checkUserLogout;
+	        if(serviceList&&serviceList!=""&&serviceList!="null"){
+		        $("#serviceSwitch").html(serviceList);
+		        $("#serviceSwitchTr").show();
+		        $("#isServerLineDisplay").show();
+	        }
+	      	var isSuccessService=onlineUserInfo.isSuccessService;
+		    if(isSuccessService&&isSuccessService=='true'){
+		    	 $("#serviceSwitchTr").show();
+		      	 $("#isServerLineDisplay").show();
+		     }else{
+		      	$("#serviceSwitchTr").hide();
+		      	$("#isServerLineDisplay").hide();
+		     }
+		  	//本机无感认证显示
+		    isAlowMab=onlineUserInfo.isAlowMab;
+		    isCloseWinAllowed=onlineUserInfo.isCloseWinAllowed;
+		  	userMac = onlineUserInfo.userMac;
+		  	var mabshow = false;
+		  	if(isAlowMab && userMac && userMac!=""){
+			  	$("#macinfoThisDevice").html("MAC: " + userMac.toLocaleUpperCase());
+		    	 if (hasMabInfo) {
+	       	 		$("#autoMac").css("background-position", "-740px 0px");
+		       	 	$("#autoMacInSetting").css("background-position", "-740px 0px");
+		       	}else{
+		       		$("#autoMac").css("background-position", "-740px -25px");
+		       		$("#autoMacInSetting").css("background-position", "-740px -25px");
+		      	}
+		    	 $("#autoMacTr").show();
+		    	 $("#mabInfoThisDevice").show();
+			     mabshow=true;
+		    }else{
+		    	$("#autoMacTr").hide();
+		    	$("#mabInfoThisDevice").hide();
+		    	mabshow=false;
+		    }
+			//注销其他设备的无感认证
+			var mabother = false;
+		  	mabInfo = onlineUserInfo.mabInfo;
+		  	var devicesHtml = "<table width='100%'>";
+		  	if(mabInfo && mabInfo!="" && mabInfo!="[]"){
+		  		mabother = true;
+		  		var mabInfoArray = eval(mabInfo);
+		  		var hasOtherMabInfo = false;
+
+		  		for(var i=0; i<mabInfoArray.length; i++){
+		  			hasOtherMabInfo = false;
+		  			var devicename = "其他设备"+(i+1);
+		  			var mab=mabInfoArray[i];
+					var expireTime  = "永不过期";
+		  			if(mab.macExpireTime && mab.macExpireTime!=""){
+		  				expireTime=mab.macExpireTime;
+		  			}
+		  			if(userMac && mab.userMac.toLocaleUpperCase() == userMac.toLocaleUpperCase()){
+		  				if(isAlowMab){
+		  					$("#mabInfoThisDevice").show();
+		  					if (hasMabInfo) {
+				       	 		$("#autoMac").css("background-position", "-740px 0px");
+					       	 	$("#autoMacInSetting").css("background-position", "-740px 0px");
+					       	}else{
+					       		$("#autoMac").css("background-position", "-740px -25px");
+					       		$("#autoMacInSetting").css("background-position", "-740px -25px");
+					      	}
+			  				continue;
+		  				}else{
+		  					$("#mabInfoThisDevice").hide();
+		  					continue;
+		  				}
+		  			}
+		  			if(mab.deviceName && mab.deviceName!=""){
+		  				devicename=mab.deviceName
+		  			}
+
+
+		  			devicesHtml = devicesHtml +
+		  			"<tr id='"+mab.userMac+"'>" +
+		  			"<td class='devicetd'> " +
+					"	<div class='zhujiming'>"+devicename+"</div><br>" +
+					"	<div class='regTime'>MAC: "+mab.userMac+"&nbsp;&nbsp;&nbsp;&nbsp;无感认证起止时间: " + mab.createTime + " 至 " + expireTime+"</div>" +
+					"	</td>" +
+					"<td>" +
+					"	<a class='checkedImg' onclick=cancelMacWithUserNameAndMac('"+mab.userId+"','"+mab.userMac+"','"+mab.userMac+"')>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>" +
+					"</td></tr>";
+		  		}
+		  		$("#autoMacNumTip").html(mabInfoArray.length);
+		  		$("#mabInfoMaxCount").html(onlineUserInfo.mabInfoMaxCount);
+		  	}else{
+		  		mabother = false;
+		  		$("#autoMacNumTip").html("0");
+		  		$("#mabInfoMaxCount").html(onlineUserInfo.mabInfoMaxCount);
+		  	}
+		  	$("#autoMacSetting").css("display","inline");
+			$("#autoMacTips").show();
+		  	devicesHtml = devicesHtml + "</table>";
+			$("#mabDevices").html(devicesHtml);
+		  	//自动登录显示
+		  	var autoLogin = false;
+		  	var eportalautoland = false;
+		  	if(onlineUserInfo.isAutoLogin && onlineUserInfo.isAutoLogin=='true'){
+		  		var cookieauto = getCookie("EPORTAL_AUTO_LAND");
+		  		var cookiesave = getCookie("EPORTAL_COOKIE_SAVEPASSWORD");
+		  		if(cookieauto&&cookieauto=="true"&& cookiesave&&cookiesave=="true"){
+
+			  		$("#autoLandSetting").css("display","inline");
+			  		eportalautoland = true;
+		  		}else{
+		  			$("#autoLandSetting").hide();
+		  		}
+			  	autoLandSettingshow();
+			  	autoLogin = true;
+		  	}else{
+		  		$("#autoLandSetting").hide();
+		  		autoLogin = false;
+		  	}
+
+		  	//无感认证配置显示
+		  	if(mabother||mabshow){
+		  		$("#autoMacSetting").css("display","inline");
+	  			$("#mabDevices").show();
+	  			$("#autoMacTips").show();
+	  			autoMacSettingshow();
+		  	}else{
+		  		$("#autoMacSetting").hide();
+		  		$("#autoMacSettingTd").hide();
+	  			$("#mabDevices").hide();
+	  			$("#autoMacTips").hide();
+		  	}
+		  	//上网设置是否显示
+		  	if(mabshow || eportalautoland ||mabother){
+		  		$("#settingTd").show();
+		  	}else{
+		  		$("#settingTd").hide();
+		  	}
+		  		var pcClient=onlineUserInfo.pcClient;
+				var pcClientUrl=onlineUserInfo.pcClientUrl;
+
+				//var phoneClient=onlineUserInfo.phoneClient;
+				/* if(pcClient=='true'||phoneClient=='true'){
+					if(pcClient=='false'){
+						$("#pcClient").hide();
+					}else{
+						$("#pcClient").attr("href",pcClientUrl);
+					}
+					if(phoneClient=='false'){
+						$("#phoneClient").hide();
+					}
+					$("#downAppTd").show();
+				}else{
+					$("#downAppTd").hide();
+				} */
+
+				if(pcClient!=""&&pcClient=='true'){
+					if(pcClientUrl&&pcClientUrl!=""){
+						$("#downAppTd").show();
+						$("#downApp").attr("href",pcClientUrl);
+					}
+				}
+
+		  	/* 填充公告栏内容 */
+		    if (onlineUserInfo.announcement && onlineUserInfo.announcement!= "") {
+		    	        //算法，计算用户名等这些东西需要显示的大小
+				    	/* if(2==getTime){
+						    var $height =getDocHeight();
+					        var tr3height = $height-223;
+					        $("#contenttable_tr3").css("height",tr3height);
+					        if(tr3height > 375){
+				        		//$("#userinfotable").css("padding-top",(tr3height-375)/2-30);
+				        		$("#notifyTd").css("padding-top",(tr3height-375)/2+10);
+				        		$("#maintable_tr1_td1").css("min-width",$("#notifyTd").width());
+				        	}else{
+				        		$("#notifyTd").css("padding-top",40);
+				        		$("#maintable_tr1_td1").css("min-width",$("#notifyTd").width());
+				        	}
+
+		    	        }	 */
+			        	var $ggl =onlineUserInfo.announcement;
+					        var array = $ggl.split("</fenye>");
+					        if (array.length > 1) {
+					            var count=array.length;
+					            var arr = new Array();
+					            for (var j = 0; j < count; j++) {
+					                          arr[j]= array[j] + "</fenye>";
+					            }
+					            if (arr.length > 0) {
+					                $("#loginFrameLogofood_hk_2").html(arr[0]);
+					            }
+					            if (count > 1) {
+					                $("#tzggTitleInfo").html("通知公告 （1/" + count + "）");
+					                $("#success_leftArrowsId").show();
+					                $("#success_rightArrowsId").show();
+					            }
+					            var _i = 0;
+					            //点击通知公告左边三角按钮
+					            $("#success_rightArrowsId").click(function () {
+					                _i++;
+					                if (_i > count - 1) {
+					                    _i = 0;
+					                }
+					                $("#loginFrameLogofood_hk_2").html(arr[_i]);
+					                var num = _i + 1;
+					                $("#tzggTitleInfo").html("通知公告 （" + num + "/" + count + "）");
+					            });
+					            //点击通知公告右边三角按钮
+					            $("#success_leftArrowsId").click(function () {
+					                _i--;
+					                if (_i < 0) {
+					                    _i = count - 1;
+					                }
+					                $("#loginFrameLogofood_hk_2").html(arr[_i]);
+					                var num = _i + 1;
+					                $("#tzggTitleInfo").html("通知公告 （" + num + "/" + count + "）");
+					            });
+					        } else {
+					            $("#loginFrameLogofood_hk_2").html("<span>" + $ggl + "</span>");
+					        }
+			        $("#isGglHideId").show();
+			        var $height =getDocHeight();
+			        var tr3height = $height-253;
+			        $("#contenttable_tr3").css("height",tr3height);
+			        if(tr3height > 375){
+		        		/* $("#userinfotable").css("padding-top",(tr3height-375)/2); */
+		        		$("#userinfotable").css("padding-top",(tr3height-375)/2);
+		        		$("#notifyTd").css("padding-top",(tr3height-375)/2+40);
+		        		$("#notifyTd1").css("padding-top",(tr3height-375)/2+40);
+		        		$("#maintable_tr1_td1").css("min-width",$("#notifyTd").width());
+		        		$("#maintable_tr1_td1").css("min-width",$("#notifyTd1").width());
+		        	}else{
+		        		$("#notifyTd").css("padding-top",40);
+		        		$("#notifyTd1").css("padding-top",40);
+		        		$("#maintable_tr1_td1").css("min-width",$("#notifyTd").width());
+		        		$("#maintable_tr1_td1").css("min-width",$("#notifyTd1").width());
+		        	}
+			    } else {
+			      	var $height =getDocHeight();
+			    	$("#isGglHideId").hide();
+			    	var tr3height = $height-120;
+		        	$("#contenttable_tr3").css("height",tr3height);
+		        	if(tr3height > 375){
+		        		$("#userinfotable").css("padding-top",(tr3height-375)/2);
+		        		$("#notifyTd").css("padding-top",(tr3height-375)/2+40);
+		        		$("#notifyTd1").css("padding-top",(tr3height-375)/2+40);
+		        		$("#maintable_tr1_td1").css("min-width",$("#notifyTd").width());
+		        		$("#maintable_tr1_td1").css("min-width",$("#notifyTd1").width());
+		        	}else{
+		        		$("#notifyTd").css("padding-top",40);
+		        		$("#notifyTd1").css("padding-top",40);
+		        		$("#maintable_tr1_td1").css("min-width",$("#notifyTd").width());
+		        		$("#maintable_tr1_td1").css("min-width",$("#notifyTd1").width());
+		        	}
+			    }
+		  	});
+	      	refreshErrorMsg();
+	  }
+
+
+
+	    function getBallInfo(ballInfo){
+	    	if(ballInfo!=null&&ballInfo.length != 0){
+		    		for (var i = 0; i < ballInfo.length; i++) {
+			          if (ballInfo[i] != null) {
+			              var ball = "#ball" + (i + 1);
+			              var valueName = "#ballvalue" + (i + 1);
+			              var tittleName = "#ballTittle" + (i + 1);
+			              if(ballInfo[i]["displayName"]){
+			                $(ball).show();
+			                $(valueName).show();
+			                var value = formatValue(ballInfo[i]["value"],ballInfo[i]["type"]);
+			                var tittle = escapeHtml(ballInfo[i]["displayName"]);
+			                var flag=ballInfo[i]["jsonValue"];
+			                var needAlert=ballInfo[i]["needAlert"];
+			                var alertUrl=ballInfo[i]["alertUrl"];
+			                var alertContent=ballInfo[i]["alertContent"];
+			                if(needAlert&&needAlert=="true"){
+			              		$("#warnStyle"+(i+1)).show();
+			              		$("#warnStyle"+(i+1)).attr("url", alertUrl);
+			                }else{
+								$("#warnStyle"+(i+1)).hide();
+							}
+			                if(alertContent&&alertContent!=""){
+			              	 	$("#tipMessageId"+(i+1)).html(alertContent);
+			              		$("#tipMessageId"+(i+1)).click(function(){
+			              			openframeUrl(alertUrl);
+			              	 	});
+			              	 	$("#tipMessageId"+(i+1)).show();
+			                }else{
+								$("#tipMessageId"+(i+1)).hide();
+							}
+				              if(flag&&flag!=""){
+				              	 var isLimit=flag.isLimit;
+				              	 if(isLimit&&isLimit!=""&&isLimit=="true"){
+				              		 $(valueName).html("<font>"+value+"</font>");
+				                   $(tittleName).html("<font>"+tittle+"</font>");
+				              	 }else{
+				              		 $(valueName).html(value);
+				                  	 $(tittleName).html(tittle);
+				              	 }
+				               }else{
+				              	 $(valueName).html(value);
+				                   $(tittleName).html(tittle);
+				              }
+			              }else{
+			              	$(ball).hide();
+			              	$(valueName).html("");
+			              }
+			              var url = ballInfo[i]["url"];
+			              if (url != null && url != "") {
+			                  $(ball).attr("url", url);
+			              }
+			          } else {
+			              $(ball).hide();
+			          }
+		    	}
+	    	}
+	    }
+
+	    function getBallInfoOver(obj,typeTemp){
+	    	if(ballInfoData!=null&&ballInfoData.length != 0){
+		    		for (var i = 0; i < ballInfoData.length; i++) {
+			          if (ballInfoData[i] != null&&obj==i+1) {
+			          	  			  var ball = "#ball" + (i + 1);
+						              var valueName = "#ballvalue" + (i + 1);
+						              var tittleName = "#ballTittle" + (i + 1);
+						              var valueOnMoveIn=ballInfoData[i]["valueOnMoveIn"];
+						              var typeOnMoveIn=ballInfoData[i]["typeOnMoveIn"];
+						              var displayNameOnMoveIn=ballInfoData[i]["displayNameOnMoveIn"];
+						              var value=ballInfoData[i]["value"];
+						              var type=ballInfoData[i]["type"];
+						              var displayName=ballInfoData[i]["displayName"];
+						              var tittleTemp="";
+						              var valueTemp ="";
+						              if(typeTemp=="over"){
+								              if(displayNameOnMoveIn&&displayNameOnMoveIn!=""){
+								              	tittleTemp = escapeHtml(displayNameOnMoveIn);
+								              }else{
+								              	tittleTemp=escapeHtml(displayName);
+								              }
+								              if(valueOnMoveIn&&valueOnMoveIn!=""){
+								              	valueTemp = formatValueMoveOn(valueOnMoveIn,typeOnMoveIn);
+								              }else{
+								              	valueTemp = formatValue(value,type);
+								              }
+						              }else{
+						              	 	 if(displayName&&displayName!=""){
+						              	 		tittleTemp = escapeHtml(displayName);
+								              }
+								              if(value&&value!=""){
+								              	valueTemp = formatValue(value,type);
+								             }
+							           }
+						            var flag=ballInfoData[i]["jsonValue"];
+					                var needAlert=ballInfoData[i]["needAlert"];
+					                var alertUrl=ballInfoData[i]["alertUrl"];
+					                var alertContent=ballInfoData[i]["alertContent"];
+					                if(needAlert&&needAlert=="true"){
+					              		$("#warnStyle"+(i+1)).show();
+					              		$("#warnStyle"+(i+1)).attr("url", alertUrl);
+					                }
+					                if(alertContent&&alertContent!=""){
+					              	 	$("#tipMessageId"+(i+1)).html(alertContent);
+					              		 $("#tipMessageId"+(i+1)).click(function(){
+					              			openframeUrl(alertUrl);
+					              	 	});
+					              	 	$("#tipMessageId"+(i+1)).show();
+					                }
+					              if(flag&&flag!=""){
+					              	 var isLimit=flag.isLimit;
+					              	 if(isLimit&&isLimit!=""&&isLimit=="true"){
+					              		 $(valueName).html("<font>"+valueTemp+"</font>");
+					                     $(tittleName).html("<font>"+tittleTemp+"</font>");
+					              	 }else{
+					              		 $(valueName).html(valueTemp);
+					                  	 $(tittleName).html(tittleTemp);
+					              	 }
+					               }else{
+					              	 $(valueName).html(valueTemp);
+					                 $(tittleName).html(tittleTemp);
+					               }
+				          	 	 }
+	    					}
+	    				}
+	    			}
+	    	//异常信息刷新
+	    	function refreshErrorMsg(){
+		     	  var url = "userV2.do?method=getErrorMsg";
+		   		  var data = {
+		   				        "userIndex": getQueryStringByName("userIndex")
+		   		 };
+	   				jQuery.getAjaxContent(url, data, function(netFlowKey){
+			   	      if(netFlowKey&&netFlowKey!=""&&errorflowurl&&errorflowurl!=""){
+			   	      	var url = errorflowurl+netFlowKey;
+			   	      	$("#errorflowTip").show();
+			   	      	if(($("#ball2").css('display')=='none')||($("#ballTittle2").html()=="流量异常")){
+			   	      		ballInfoData[1] = {'alertContent':'','alertContentMobile':'','alertUrl':url,'displayName':'流量异常','displayNameOnMoveIn':'','id':'flowexcept','jsonValue':'','needAlert':'true','type':'string','typeOnMoveIn':'','url':url,'value':'流量异常','valueOnMoveIn':''};
+			   	      	};
+			   	      	getBallInfo(ballInfoData);
+			   	      	$("#errorflowTip").click(function(){
+			   	      		openframeUrl(errorflowurl+netFlowKey);
+			   	      	});
+			   	      	//fillData();
+			   	      }
+	   			});
+	    }
+
+	    function toggleJizhumm(){
+	    	var cookiesave = getCookie("EPORTAL_COOKIE_SAVEPASSWORD");
+	    	if(cookiesave&&cookiesave=="true"){
+	    		 setCookies("EPORTAL_COOKIE_USERNAME", "");
+	        	 setCookies("EPORTAL_COOKIE_PASSWORD", "");
+	        	 setCookies("EPORTAL_COOKIE_SERVER", "");
+	        	 setCookies("EPORTAL_COOKIE_SERVER_NAME",'');
+				 setCookies("EPORTAL_COOKIE_DOMAIN",'false');
+	        	 setCookies("EPORTAL_COOKIE_SAVEPASSWORD","false");
+	        	 $("#jizhumm").css("background-position", "-80px -36px");
+	        	 setCookies("EPORTAL_AUTO_LAND", "false");
+	        	 $("#autoLand").css("background-position", "-740px -25px");
+	    	}else{
+				if(domianName&&domianName!=''&&domianName!='null'){
+					if(domianName=='true'&&userId.indexOf("@")>-1){
+						userId=userId.substring(0,userId.lastIndexOf("@"));
+					}
+					setCookies("EPORTAL_COOKIE_DOMAIN",domianName);
+			         }
+		    		 setCookies("EPORTAL_COOKIE_USERNAME", userId);
+		     		 setCookies("EPORTAL_COOKIE_PASSWORD", password);
+		     		 if(realServiceName&&realServiceName!=""&&realServiceName!="null"){
+		     		 	 setCookies("EPORTAL_COOKIE_SERVER", realServiceName);
+			     		 setCookies("EPORTAL_COOKIE_SERVER_NAME",cookieService);
+		     		 }
+		     		 setCookies("EPORTAL_COOKIE_SAVEPASSWORD","true");
+		     		 $("#jizhumm").css("background-position", "-80px 0");
+	    	}
+	    }
+
+
+	    function toggleAutoland(){
+
+	    	var cookieauto = getCookie("EPORTAL_AUTO_LAND");
+	    	var cookiesave = getCookie("EPORTAL_COOKIE_SAVEPASSWORD");
+	    	if(cookieauto&&cookieauto=="true"){
+	    		 document.getElementById("w-confirm-content").innerHTML="关闭自动登录后只能在登录页面重新开启！确定要关闭？";
+	    		 document.getElementById("sure").href="javascript:sureCancleAutoland();"
+	    		 $("#mabcolse-confirm").show();
+	    		/* if(confirm("关闭自动登录后只能在登录页面重新开启！确定要关闭？")){
+	    		//if(cookiesave!='true'){
+	    			setCookies("EPORTAL_COOKIE_USERNAME", "");
+	        	 	setCookies("EPORTAL_COOKIE_PASSWORD", "");
+	        	 	setCookies("EPORTAL_COOKIE_SERVER", "");
+	        	 	setCookies("EPORTAL_COOKIE_SERVER_NAME",'');
+					setCookies("EPORTAL_COOKIE_DOMAIN",'');
+	        	    setCookies("EPORTAL_COOKIE_SAVEPASSWORD","false");
+	        	    $("#jizhumm").css("background-position", "-80px -36px");
+	    		//}
+		    		 setCookies("EPORTAL_AUTO_LAND", "false");
+		        	 $("#autoLand").css("background-position", "-740px -25px");
+	    		} */
+	    	} else{
+	    		alert("自动登录功能已经关闭，只能在登录页面重新开启！");
+	    		/* if(cookiesave!='true'){
+				if(domianName&&domianName!=''&&domianName!='null'){
+			    			if(domianName=='true'&&userId.indexOf("@")>-1){
+			    				userId=userId.substring(0,userId.lastIndexOf("@"));
+			    			}
+			    			setCookies("EPORTAL_COOKIE_DOMAIN",domianName);
+		    		}
+		    		 setCookies("EPORTAL_COOKIE_USERNAME", userId);
+		     		 setCookies("EPORTAL_COOKIE_PASSWORD", password);
+		     		 if(realServiceName&&realServiceName!=""&&realServiceName!="null"){
+		     		 	 setCookies("EPORTAL_COOKIE_SERVER", realServiceName);
+			     		 setCookies("EPORTAL_COOKIE_SERVER_NAME",cookieService);
+		     		 }
+		     		 $("#jizhumm").css("background-position", "-80px 0px");
+		     		 setCookies("EPORTAL_COOKIE_SAVEPASSWORD","true");
+	    		 }
+	     		 setCookies("EPORTAL_AUTO_LAND", "true");
+	     		 $("#autoLand").css("background-position", "-740px 0px"); */
+	    	}
+
+	  	}
+
+
+	    function sureCancleAutoland(){
+	    	document.getElementById("mabcolse-confirm").style.display="none";
+	    	setCookies("EPORTAL_COOKIE_USERNAME", "");
+    	 	setCookies("EPORTAL_COOKIE_PASSWORD", "");
+    	 	setCookies("EPORTAL_COOKIE_SERVER", "");
+    	 	setCookies("EPORTAL_COOKIE_SERVER_NAME",'');
+			setCookies("EPORTAL_COOKIE_DOMAIN",'');
+	    	    setCookies("EPORTAL_COOKIE_SAVEPASSWORD","false");
+	    	    $("#jizhumm").css("background-position", "-80px -36px");
+			//}
+	  		 setCookies("EPORTAL_AUTO_LAND", "false");
+	      	 $("#autoLand").css("background-position", "-740px -25px");
+	    }
+
+
+
+	    function toggleAutoMac(){
+	    	$("#settingErrInfoId").html('');
+	    	var userIndex = getQueryStringByName("userIndex");
+	        AuthInterFace.init("./");
+	        $("#alert-continue-pop").show();
+	        meter = setTimeout("$('#alert-continue-pop').hide()",3000);
+	    	if(hasMabInfo){
+	    			AuthInterFace.cancelMac('',userIndex,function(data){
+	    				clearTimeout(meter);
+	    			$('#alert-continue-pop').hide();
+	    			if(data.result=='success'){
+	    				$("#autoMac").css("background-position", "-740px -25px");
+	    				$("#autoMacInSetting").css("background-position", "-740px -25px");
+	      				hasMabInfo=false;
+	      				AuthInterFace.freshOnlineUserInfo(userIndex,function(freshOnline){
+									 getTime=1;
+						       		 fillData();
+				      				 $("#macinfoThisDevice").html("MAC: "+freshOnline.userMac.toLocaleUpperCase());
+								});
+		      		}else{
+		      			showMessage(data.message);
+		      		}
+	    		});
+	    	}else{
+	    			AuthInterFace.registerMac('',userIndex,function(data){
+	    				clearTimeout(meter);
+	    			$('#alert-continue-pop').hide();
+	    			if(data.result=='success'){
+	    				$("#autoMac").css("background-position", "-740px 0px");
+	    				$("#autoMacInSetting").css("background-position", "-740px 0px");
+	      				hasMabInfo=true;
+	      				AuthInterFace.freshOnlineUserInfo(userIndex,function(freshOnline){
+									 getTime=1;
+						       		 fillData();
+								});
+		      		}else{
+		      			showMessage(data.message);
+		      		}
+	    		});
+	    	}
+	    }
+
+	    function toggleAutoMacAutoMacInSetting(){
+	    	$("#settingErrInfoId").html('');
+	    	var userIndex = getQueryStringByName("userIndex");
+	        AuthInterFace.init("./");
+	    	if(hasMabInfo){
+	    			AuthInterFace.cancelMac('',userIndex,function(data){
+	    			if(data.result=='success'){
+	    				$("#autoMac").css("background-position", "-740px -25px");
+	    				$("#autoMacInSetting").css("background-position", "-740px -25px");
+	      				hasMabInfo=false;
+	      				AuthInterFace.freshOnlineUserInfo(userIndex,function(freshOnline){
+									 getTime=1;
+						       		 fillData();
+				      				 $("#macinfoThisDevice").html("MAC: "+freshOnline.userMac.toLocaleUpperCase());
+								});
+		      		}else{
+		      			alert(data.message);
+		      		}
+	    		});
+	    	}else{
+	    			AuthInterFace.registerMac('',userIndex,function(data){
+	    			if(data.result=='success'){
+	    				$("#autoMac").css("background-position", "-740px 0px");
+	    				$("#autoMacInSetting").css("background-position", "-740px 0px");
+	      				hasMabInfo=true;
+	      				AuthInterFace.freshOnlineUserInfo(userIndex,function(freshOnline){
+									 getTime=1;
+						       		 fillData();
+								});
+		      		}else{
+		      			alert(data.message);
+		      		}
+	    		});
+	    	}
+	    }
+
+	    window.onresize=function(){
+	    	height=0;
+	    	autosize();
+	    }
+	    function autosize(){
+	      var $width = $("#hk_margin_left_2").width();
+	      var $body = $(document.body).width();
+	      var $marginLeft = ($body - $width) /2 ;
+	      if ($width > 0) {
+	      	  if($marginLeft<110){
+	          	$marginLeft = 110;
+	          }
+	          $("#hk_margin_left_1").css("padding-left", $marginLeft);
+	          $("#info").css("padding-left", $marginLeft);
+	          $("#leftId").css("padding-left", ($marginLeft-110));
+	          $("#logo").css("margin-left", ($marginLeft-100));
+	          $("#hk_margin_left_2").css("padding-left", $marginLeft);
+	          $("#info").css("width", $width);
+	          $("#hk_margin_left_2").css("width", $width);
+	          $("#loginFrameLogofood_hk_1").css("margin-left", (200 - ($body * 0.1)));
+	    	  $("#loginFrameLogofood_hk_2").css("margin-left", (200 - ($body * 0.1)));
+	      }
+		  var $ggl = $("#loginGglLabel").html();
+
+	      var $gglHeight = 0;
+			if ($ggl == "") {
+			    $gglHeight = 160;
+			    $("#isGglHideId").hide();
+			}
+			if($body>900){
+				$("#divTupian3").css("margin-left",($body-900)/2-250);
+				$("#divPop").css("margin-left",($body-900)/2-250);
+				$("#index_subpage_title_bg").css("margin-left",($body-900)/2-210);
+				$("#divTupian3_package").css("margin-left",($body-900)/2-250);
+				$("#divPop_package").css("margin-left",($body-900)/2-250);
+			}
+	    }
+	    var userId="";
+	    var password="";
+	    var isshowClose;
+	    window.onload = function () {
+	    	isshowClose="true";
+	    	fillData();
+	    	autosize();
+	    	startSwitchDelayTime();
+	    	var userIndex = getQueryStringByName("userIndex");
+	    	var keepaliveInterval=getQueryStringByName("keepaliveInterval");
+	       	if(keepaliveInterval!=''&keepaliveInterval!=null&keepaliveInterval>0){
+	       		setInterval(function (){
+	       					AuthInterFace.keepalive(userIndex);
+	       				},keepaliveInterval*60*1000);
+	       	}
+	    }
+
+	    window.onbeforeunload = function() {
+	    	var keepaliveInterval=getQueryStringByName("keepaliveInterval");
+	     	if(keepaliveInterval!=''&keepaliveInterval!=null&keepaliveInterval>0){
+	    	var check_user_logout=checkUserLogout;
+	    	var is_close_win_allowed =isCloseWinAllowed ;
+		    if(check_user_logout == "1"){
+					if (is_close_win_allowed == "false"&&isshowClose=="true") {
+						return confirmWin();
+					}
+		    }
+	      }
+	    }
+	    window.onunload = function() {
+	    	var keepaliveInterval=getQueryStringByName("keepaliveInterval");
+	     	if(keepaliveInterval!=''&keepaliveInterval!=null&keepaliveInterval>0){
+	    	var is_close_win_allowed =isCloseWinAllowed ;
+	    	 var check_user_logout=checkUserLogout;
+	    	 if(check_user_logout == "1"){
+	    		if (is_close_win_allowed == "false"&&isshowClose=="true") {
+	    			var userIndex = getQueryStringByName("userIndex");
+					AuthInterFace.logout(userIndex);
+	    		}
+	    	 }
+	     	}
+		}
+
+
+
+	    function keepalive(){
+	    	var userIndex = getQueryStringByName("userIndex");
+	      	AuthInterFace.init("./");
+	       	AuthInterFace.keepalive(userIndex);
+	    }
+
+	    function displaySubMenu(li) {
+	        var subMenu = li.getElementsByTagName("ul")[0];
+	        subMenu.style.display = "block";
+	    }
+	    function hideSubMenu(li) {
+	        var subMenu = li.getElementsByTagName("ul")[0];
+	        subMenu.style.display = "none";
+	    }
+	    function overLi(li, i) {
+	        if (i == 2) {
+	            $(li).css({"background": "#436e9b"});
+	        }
+	    }
+	    function outLi(li, i) {
+	        if (i == 2) {
+	            $(li).css({"background": "#BDBDBD"});
+	        }
+	    }
+	  	var switchDelayTime=30;
+	  	function selectService(serviceName,serviceShowName,des,serviceJ){
+	  	   if(switchDelayTime!=0){
+	  			showMessage("您刚认证成功或切换的太频繁,请"+switchDelayTime+"s后再进行切换！");
+				return;
+		   }
+	  	   var userIndex = getQueryStringByName("userIndex");
+	         AuthInterFace.switchService(userIndex,encodeURIComponent(serviceName),function(switchServiceResult){
+	      	 userIndex = switchServiceResult.userIndex;
+	         var keepaliveInterval = switchServiceResult.keepaliveInterval;
+	         if(switchServiceResult.result=="success"){
+	        	 showMessage("切换成功,3s后刷自动新页面!");
+	        	 isshowClose="false";
+	        	// is_close_win_allowed_do="false";
+	        	 setTimeout(function(){
+	        		 freshSuccessPage(userIndex,keepaliveInterval);
+	        	 },3000);
+	         }else{
+	        	  AuthInterFace.logout(userIndex,function(logoutResult){
+	        	  	 showMessage("切换失败,"+switchServiceResult.message+" 3s后到登录页面!");
+	            	 setTimeout(function(){
+	            		 gologinPage();
+	            	 },3000);
+	        	 });
+	         }
+	       });
+		}
+
+
+			var freshTime = new Date().getTime();
+			var nowTime= new Date().getTime();
+			function reduceSwitchDelayTime(){
+				nowTime = new Date().getTime();
+				if(nowTime - freshTime > 30000){
+					switchDelayTime=0;
+				}else{
+					switchDelayTime= 30 -Math.round((nowTime - freshTime)/1000);
+				}
+				if(switchDelayTime>0){
+					switchDelayTime--;
+				}
+			}
+
+			function startSwitchDelayTime(){
+				try{
+					setInterval('reduceSwitchDelayTime()',1000);
+				}catch(e){
+					switchDelayTime=0;
+				}
+			}
+
+	  	function freshSuccessPage(userIndex,keepaliveInterval){
+	  		window.location="success.jsp?userIndex="+userIndex+"&keepaliveInterval="+keepaliveInterval;
+	  		AuthInterFace.freshOnlineUserInfo(userIndex,function(freshOnline){
+					 getTime=1;
+		       		 fillData();
+			});
+	  	}
+
+	  	function gologinPage(){
+	  		window.location="./success.jsp";
+	  	}
+
+			function showMessage(message) {
+				if($("#tipDiv").length>0){
+					showTipMessage(message);
+				}else{
+					if(message != '') {
+						alert(message);
+					}
+				}
+			}
+			function showTipMessage(msg,title,mode){
+				closeSubPage();
+				if (msg != '') {
+					$("#tip_content").html(msg);
+					$("#tipDiv").show();
+					if(title){
+						$("#tip_title").html(title);
+					}else{
+						$("#tip_title").html("操作提示");
+					}
+					$("#tipframe").show();
+				}
+			}
+
+			function closeTipMessage(){
+				$("#tipframe").hide();
+				$("#tipDiv").hide();
+			}
+
+			function confirmWin(){
+				 return '如果关闭、离开或刷新该页面,系统将使您不能上网!如果刷新页面，请使用页面刷新按钮!';
+			}
+
+			String.prototype.httpHtml = function(){
+				var reg = /(http:\/\/|https:\/\/)((\w|=|\?|\.|\/|&|-)+)/g;
+				return this.replace(reg, '<a target=_blank href="$1$2">$1$2</a>');
+			};
+
+			//鼠标移上去样式
+			function onmouseOver(obj){
+				if(obj==1){
+					document.getElementById("ballball1").className="accountBalanceOver";
+					onmouseOut(2);
+					onmouseOut(3);
+				}else if(obj==2){
+					document.getElementById("ballball2").className="setMealOver";
+					onmouseOut(1);
+					onmouseOut(3);
+				}else{
+					document.getElementById("ballball3").className="availableTime_tipOver";
+					onmouseOut(1);
+					onmouseOut(2);
+				}
+				getBallInfoOver(obj,"over");
+			}
+		   //鼠标移出去样式
+			function onmouseOut(obj){
+				if(obj==1){
+					document.getElementById("ballball1").className="accountBalance";
+				}else if(obj==2){
+					document.getElementById("ballball2").className="setMeal";
+				}else{
+					document.getElementById("ballball3").className="availableTime_tip";
+				}
+				getBallInfoOver(obj,"out");
+			}
+
+			function hideAllTitleImg(){
+	 			$("#index_subpage_title_bg").hide();
+				$("#feeChargeModuleTitleImage").hide();
+				$("#changePackageModuleTitleImage").hide();
+				$("#shiYongXiangQingTitleImage").hide();
+				$("#daoQiTiXingTitleImage").hide();
+			};
+			var mab_userId;
+		 	var mab_userMac;
+		 	var mab_trid;
+			function cancelMacWithUserNameAndMac(userId,userMac,trid){
+				mab_userId = userId ;
+				mab_userMac = userMac;
+				mab_trid = trid;
+				document.getElementById("w-confirm-content").innerHTML="关闭无感认证后,只能在设备本机上再次开启!";
+		        document.getElementById("sure").href="javascript:sureCancleMac();"
+		    	$("#mabcolse-confirm").show();
+
+				/*
+				 var test = confirm("关闭无感认证后,只能在设备本机上再次开启!");
+				if(test){
+					AuthInterFace.cancelMacWithUserNameAndMac(userId,userMac,function(data){
+			  			if(data.result=='success'){
+			  				//$("#"+trid).hide();
+			  				//$("#autoMacNumTip").html($("#autoMacNumTip").html()-1);
+			  				var userIndex = getQueryStringByName("userIndex");
+							AuthInterFace.freshOnlineUserInfo(userIndex,function(freshOnline){
+								 getTime=1;
+					       		 fillData();
+							});
+			      		}else{
+			      			alert(data.message);
+			      		}
+		  			});
+				} */
+			}
+
+			function sureCancleMac(){
+				AuthInterFace.cancelMacWithUserNameAndMac(mab_userId,mab_userMac,function(data){
+					if(data.result=='success'){
+						//$("#"+trid).hide();
+						//$("#autoMacNumTip").html($("#autoMacNumTip").html()-1);
+						var userIndex = getQueryStringByName("userIndex");
+						AuthInterFace.freshOnlineUserInfo(userIndex,function(freshOnline){
+						 getTime=1;
+			       		 fillData();
+						});
+		    		}else{
+		    			alert(data.message);
+		    		}
+				});
+				document.getElementById("mabcolse-confirm").style.display="none";
+				/*
+				document.getElementById("mabcolse-confirm").style.display="none";
+				AuthInterFace.cancelMacWithUserNameAndMac(userId,userMac,function(data){
+	  			if(data.result=='success'){
+	  				//$("#"+trid).hide();
+	  				//$("#autoMacNumTip").html($("#autoMacNumTip").html()-1);
+	  				var userIndex = getQueryStringByName("userIndex");
+					AuthInterFace.freshOnlineUserInfo(userIndex,function(freshOnline){
+						 getTime=1;
+			       		 fillData();
+					});
+	      		}else{
+	      			alert(data.message);
+	      		}
+  			}); */
+			}
+
+	  	function autoMacSettingshow(){
+	  		$("#autoLandSetting").attr("class","unchecked");
+	  		$("#autoMacSetting").attr("class","checked");
+  			$("#mabDevices").show();
+  			if(isAlowMab && userMac && userMac!=""){
+  				$("#mabInfoThisDevice").show();
+  			}
+  			$("#autoMacTips").show();
+  			$("#autoLandTable").hide();
+	  	}
+
+	  	function autoLandSettingshow(){
+	  		//$("#autoLandSetting").attr("class","checked");
+	  		$("#autoMacSetting").attr("class","unchecked");
+  			$("#mabDevices").hide();
+  			$("#mabInfoThisDevice").hide();
+  			$("#autoMacTips").hide();
+  			$("#autoLandTable").show();
+	  	}
+
+
+	  	function cancleLogout(){
+	  		document.getElementById("mabcolse-confirm").style.display="none";
+	  	}
+	  	function sureLogout(){
+
+	  		document.getElementById("mabcolse-confirm").style.display="none";
+	  		var userIndex = getQueryStringByName("userIndex");
+             AuthInterFace.logout(userIndex,function(logoutResult){
+            	 if (logoutResult.result == "success") {
+            		isshowClose="false";
+                 	location.replace("logout.jsp");
+	             }else{
+	             	location.replace("logout.jsp");
+	             }
+            });
+	  	}
+	  	window.alert = function(msg){
+				showMessage(msg);
+			}
+
+	</script> </body> </html>
