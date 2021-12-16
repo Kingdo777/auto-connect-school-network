@@ -13,14 +13,21 @@ def login():
     header = {
         "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
     }
-    response = requests.post(url, data, headers=header)
-    content = json.loads(response.text)
-    encoding = response.encoding
-    if content['result'] == 'fail':
-        print(content['message'].encode(encoding).decode('utf-8'))
-    else:
-        print("login at --> " + time.asctime(time.localtime(time.time())))
-    return
+
+    try:
+        response = requests.post(url, data, headers=header, timeout=10)
+        content = json.loads(response.text)
+        encoding = response.encoding
+        if content['result'] == 'fail':
+            msg = content['message'].encode(encoding).decode('utf-8')
+            print(msg)
+            if msg == "认证设备响应超时,请稍后再试!":
+                time.sleep(120)
+        else:
+            print("login at --> " + time.asctime(time.localtime(time.time())))
+        return
+    except Exception as info:
+        print("login 连接异常:" + str(info))
 
 
 def pong():
