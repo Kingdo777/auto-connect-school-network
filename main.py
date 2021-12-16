@@ -1,9 +1,7 @@
-import time
 import json
-
-from scapy.layers.inet import IP, ICMP
-from scapy.packet import Raw
-from scapy.sendrecv import sr1
+import os
+import sys
+import time
 
 import requests
 
@@ -26,16 +24,11 @@ def login():
 
 
 def pong():
-    ping_pkt = IP(dst="8.8.8.8") / ICMP() / b'welcome!'
-    ping_result = sr1(ping_pkt, timeout=2, verbose=False)
-    try:
-        if ping_result.getlayer(ICMP).fields['type'] == 0 \
-                and ping_result.getlayer(Raw).fields['load'] == b'welcome!':
-            return True
-        else:
-            return False
-    except Exception:
-        return False
+    if sys.platform.lower() == "win32":
+        response = os.system("ping -n 1 8.8.8.8 > ping.log")
+    else:
+        response = os.system("ping -c 1 8.8.8.8 > ping.log")
+    return response == 0
 
 
 if __name__ == '__main__':

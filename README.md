@@ -52,6 +52,9 @@ if __name__ == '__main__':
 
 ## 使用
 
+0. git clone https://github.com/Kingdo777/auto-connect-school-network.git
+
+
 1. 我们将上一过程获取到的content信息存放到main.py的同目录下的名为`content`的文件中
 
 
