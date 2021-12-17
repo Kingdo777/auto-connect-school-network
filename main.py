@@ -1,8 +1,10 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
 import json
 import os
 import sys
 import time
-
 import requests
 
 
@@ -30,12 +32,17 @@ def login():
         print("login 连接异常:" + str(info))
 
 
+def ping(host, n):
+    cmd = "ping {} {} {} > ping.log".format(
+        "-n" if sys.platform.lower() == "win32" else "-c",
+        n,
+        host,
+    )
+    return 0 == os.system(cmd)
+
+
 def pong():
-    if sys.platform.lower() == "win32":
-        response = os.system("ping -n 1 8.8.8.8 > ping.log")
-    else:
-        response = os.system("ping -c 1 8.8.8.8 > ping.log")
-    return response == 0
+    return ping("202.114.0.242", 4) or ping("8.8.8.8", 4)
 
 
 if __name__ == '__main__':
