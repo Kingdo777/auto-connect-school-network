@@ -1,2 +1,3 @@
-set AUTO_NET_RECONNECT_LOG_FILE="C:\Users\kingdo\OneDrive - 张振兴伉俪书院\桌面\net-reco.log"
-.\venv\Scripts\python.exe .\main.py
+pip3 install requests
+set AUTO_NET_RECONNECT_LOG_FILE=connect.log
+python3.exe .\main.py
