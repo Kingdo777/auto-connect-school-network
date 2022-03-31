@@ -2,3 +2,6 @@
 venv/
 content
 userIndex
+
+*.log
+content*

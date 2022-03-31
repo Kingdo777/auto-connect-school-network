@@ -6,14 +6,16 @@ import requests
 
 
 def log(info):
-    log_file = os.environ.get('AUTO_NET_RECONNECT_LOG_FILE')
+    log_file = os.environ.get('AUTO_NET_RECONNECT_LOG_FILE', "connect.log")
+    print(info.strip())
     with open(log_file, "a") as f:
         f.write(info.strip() + "\n")
 
 
 def login():
     url = 'http://192.168.50.3:8080/eportal/InterFace.do?method=login'
-    with open("content", "r") as f:
+    config_file = os.environ.get('AUTO_NET_RECONNECT_CONFIG_FILE', "content")
+    with open(config_file, "r") as f:
         data = f.read()
     header = {
         "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
@@ -28,6 +30,8 @@ def login():
             log(msg)
             if msg == "认证设备响应超时,请稍后再试!":
                 time.sleep(120)
+            if msg == '正常上网时段为:日常06:00-23:59，请在以上时段内进行认证上网!':
+                time.sleep(1200)
         else:
             log("login at --> " + time.asctime(time.localtime(time.time())))
         return
