@@ -16,7 +16,7 @@ def login():
     url = 'http://192.168.50.3:8080/eportal/InterFace.do?method=login'
     config_file = os.environ.get('AUTO_NET_RECONNECT_CONFIG_FILE', "content")
     with open(config_file, "r") as f:
-        data = f.read()
+        data = f.read().strip('"').strip("'")
     header = {
         "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
     }
